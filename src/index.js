@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/css/main.css'
-import App from './App';
+import Home from './home'
 import Navbar from './components/Navbar/Navbar';
-
 ReactDOM.render(
 <div>
     <Navbar />
-    <App />   
+    <Home />   
 </div>,document.getElementById('root'));
