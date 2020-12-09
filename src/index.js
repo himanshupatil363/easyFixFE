@@ -8,6 +8,4 @@ ReactDOM.render(
 <div>
     <Navbar />
     <App />   
-</div>
-    , 
-    document.getElementById('root'));
+</div>,document.getElementById('root'));
