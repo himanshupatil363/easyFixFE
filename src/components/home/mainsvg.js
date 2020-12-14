@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 function MainSvg() {
   return (
     <div className="MainSvg bg-primary sm:flex justify-between">
-      <div className="text-3xl sm:text-5xl text-white pt-1 sm:pt-0 mx-10 sm:mx-0 sm:my-24 sm:ml-44">
+      <div className="text-3xl sm:text-5xl text-white pt-1 sm:pt-0 mx-10 sm:mx-0 sm:my-24 sm:ml-40">
         <div className="text-5xl sm:text-7xl mt-10 font-bold text-white tracking-wide">
         <Typewriter
              options={{
