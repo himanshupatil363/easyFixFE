@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link , NavLink} from 'react-router-dom';
+
 const Navbar = () => {
   const[nav , setNav] = useState(true);
   return (
@@ -22,11 +24,11 @@ const Navbar = () => {
                Easy<b className="text-danger">Fix</b>
               </div>
               <div className="hidden sm:block sm:ml-6">
-                <div className="flex ml-0 lg:ml-72 space-x-4">
-                  <a href="#" className=" text-base bg-white text-dull px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                  <a href="#" className=" text-base text-white hover:bg-white hover:text-dull px-3 py-2 rounded-md text-sm font-medium">About</a>
-                  <a href="#" className=" text-base text-white hover:bg-white hover:text-dull px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-                  <a href="#" className=" text-base text-white hover:bg-white hover:text-dull px-3 py-2 rounded-md text-sm font-medium">Provider</a>
+                <div className="flex ml-0 lg:ml-72 space-x-4 text-white">
+                  <NavLink to="/" exact activeClassName="text-yellow-400"><li className=" list-none  px-3 py-2 rounded-md  font-medium">Home</li></NavLink>
+                  <NavLink to="/about" activeClassName="text-blue-400"><li className="list-none  px-3 py-2 rounded-md  font-medium">About</li></NavLink>
+                  <NavLink to="/contact" activeClassName="text-red-400"><li href="#" className="list-none  px-3 py-2 rounded-md  font-medium">Contact</li></NavLink>
+                  <NavLink to="/categories" activeClassName="text-green-400"><li href="#" className="list-none  px-3 py-2 rounded-md  font-medium">Categories</li></NavLink>
                 </div>
               </div>
             </div>
@@ -38,12 +40,12 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div  className={ nav ? 'hidden sm:hidden' : '' }>
+        <div  className={ nav ? 'hidden sm:hidden' : 'sm:hidden' }>
           <div className="px-2 pt-2 pb-3 space-y-1">
             <a href="#" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
             <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
             <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Provider</a>
+            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Categories</a>
           </div>
         </div>
       </nav>
