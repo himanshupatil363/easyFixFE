@@ -15,7 +15,7 @@ const Cat = () => {
         <div className="bg-white px-2 sm:px-32 py-2 sm:py-6 mt-5 rounded-xl shadow-xl">
           <ul className="flex justify-center content-center mb-8 sm:mb-16 mt-5">
             <li className="mx-2 sm:mx-4">
-            <div className="flex justify-center"><img className="h-12 sm:16" src={pack} alt="" itemscope="" itemprop="image" /></div>
+            <div className="flex justify-center"><img className="h-12 sm:h-16" src={pack} alt="" itemscope="" itemprop="image" /></div>
                 <p className="font-regular sm:font-semibold mt-3">Moving &amp; Shifting</p>
             </li>
             <li className="mx-2 sm:mx-4">
