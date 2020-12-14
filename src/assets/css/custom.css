@@ -3,6 +3,6 @@
     margin: 0px;
     padding: 0px;
 }
-.act{
-    
-}
+*::selection {
+    background: #eb425352 !important; /* WebKit/Blink Browsers */
+  }
