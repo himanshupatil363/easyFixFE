@@ -19,6 +19,7 @@ module.exports = {
       'danger':'#e1515f',
       'secondary':'#f1d37e',
       'dull':'#4D5256',
+      'ter':'#AEE696',
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
