@@ -11,7 +11,7 @@ const Cat = () => {
   return (
     <div className="Cat w-full bg-no-repeat " style={{ backgroundImage: `url(${Svg})`}} >
       <div className="flex justify-center">
-        <div className="bg-white px-2 sm:px-32 py-2 sm:py-6 mt-5 rounded-xl shadow-xl">
+        <div className="bg-gray-300 border-gray-300 border-2 bg-opacity-25 px-2 sm:px-32 py-2 sm:py-6 mt-5 rounded-xl shadow-2xl" style={{backdropFilter: `blur(10px)`}}>
           <ul className="flex justify-center content-center mb-8 sm:mb-16 mt-5">
             <li className="mx-2 sm:mx-4">
             <div className="flex justify-center"><img className="h-12 sm:h-16" src={pack} alt="" itemscope="" itemprop="image" /></div>

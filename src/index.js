@@ -9,7 +9,6 @@ import About from './pages/about'
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Switch , Route} from 'react-router-dom';
-
 ReactDOM.render(
 <Router>
     <div>
