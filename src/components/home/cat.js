@@ -8,7 +8,6 @@ import makeup from '../../assets/images/makeover.svg'
 import appliance from '../../assets/images/settings.svg'
 import plumb from '../../assets/images/plumber.svg'
 const Cat = () => {
-//   const[nav , setNav] = useState(true);
   return (
     <div className="Cat w-full bg-no-repeat " style={{ backgroundImage: `url(${Svg})`}} >
       <div className="flex justify-center">

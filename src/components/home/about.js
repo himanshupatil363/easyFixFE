@@ -29,7 +29,7 @@ const About = () => {
         </div>
       </div>
       <div className="flex justify-center my-20">
-           <NavLink to="/about" className="text-ter rounded-full px-10 py-3 text-lg font-bold border-4 border-ter hover:bg-ter hover:text-white duration-1000">Know More</NavLink>
+           <NavLink to="/about" className="text-primary rounded-full px-10 py-3 text-lg font-bold border-4 border-primary hover:bg-primary hover:text-white duration-1000">Know More</NavLink>
       </div>
     </div>
   );
