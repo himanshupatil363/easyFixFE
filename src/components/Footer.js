@@ -9,18 +9,18 @@ const Footer = () => {
       <div className="Footer">
        <div className="flex justify-between px-40 bg-dull text-white py-2 h-full">
            <div className="flex-column w-96 h-full text-center justify-center items-center">
-               <div className="font-bold text-4xl text-white">
+               <div className="font-bold text-5xl text-white mt-10">
                Easy<b className="text-danger">Fix</b>
                </div>
                <p className="mt-5">EasyFix is India's largest and most trusted service platform. Our vision is to be one-stop service partner for every Indian.</p>
             </div>
            <div>
-               <p className=" font-semibold text-2xl my-5">Links</p>    
+               <p className=" font-semibold text-3xl my-5">Links</p>    
            <div className="flex-column justify-center">
-                <NavLink to="/" exact activeClassName="text-yellow-400"><p className="my-3">Home</p></NavLink>
-                <NavLink to="/about" activeClassName="text-blue-400"><p className="my-3">About</p></NavLink>
-                <NavLink to="/contact" activeClassName="text-red-400"><p className="my-3">Conatcts</p></NavLink>
-                <NavLink to="/categories" activeClassName="text-green-400"><p className="my-3">Categories</p></NavLink>
+                <NavLink to="/" exact activeClassName="text-ter"><p className="my-3">Home</p></NavLink>
+                <NavLink to="/about" activeClassName="text-ter"><p className="my-3">About</p></NavLink>
+                <NavLink to="/contact" activeClassName="text-ter"><p className="my-3">Conatcts</p></NavLink>
+                <NavLink to="/categories" activeClassName="text-ter"><p className="my-3">Categories</p></NavLink>
             </div>
             </div>
            <div className=""><p className=" font-semibold text-2xl my-5">social media</p>

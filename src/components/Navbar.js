@@ -24,11 +24,11 @@ const Navbar = () => {
                Easy<b className="text-danger">Fix</b>
               </div>
               <div className="hidden sm:block sm:ml-6">
-                <div className="flex ml-0 lg:ml-72 space-x-4 text-white">
-                  <NavLink to="/" exact activeClassName="text-yellow-400"><li className=" list-none  px-3 py-2 rounded-md  font-medium">Home</li></NavLink>
-                  <NavLink to="/about" activeClassName="text-blue-400"><li className="list-none  px-3 py-2 rounded-md  font-medium">About</li></NavLink>
-                  <NavLink to="/contact" activeClassName="text-red-400"><li href="#" className="list-none  px-3 py-2 rounded-md  font-medium">Contact</li></NavLink>
-                  <NavLink to="/categories" activeClassName="text-green-400"><li href="#" className="list-none  px-3 py-2 rounded-md  font-medium">Categories</li></NavLink>
+                <div className="flex ml-0 lg:ml-72 space-x-4 text-white text-xl">
+                  <NavLink to="/" exact activeClassName="text-ter"><li className=" list-none  px-3 py-2 rounded-md  ">Home</li></NavLink>
+                  <NavLink to="/about" activeClassName="text-ter"><li className="list-none  px-3 py-2 rounded-md  ">About</li></NavLink>
+                  <NavLink to="/contact" activeClassName="text-ter"><li href="#" className="list-none  px-3 py-2 rounded-md  ">Contact</li></NavLink>
+                  <NavLink to="/categories" activeClassName="text-ter"><li href="#" className="list-none  px-3 py-2 rounded-md  ">Categories</li></NavLink>
                 </div>
               </div>
             </div>
