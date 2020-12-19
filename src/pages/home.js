@@ -8,8 +8,8 @@ function Home() {
     <div className="Home">
       <HomeSvg />
       <Cat />
-      <About />
       <Tweets />
+      <About />
     </div>
   );
 }

@@ -7,14 +7,12 @@ import gmail from '../assets/images/gmail.svg'
 const Footer = () => {
     return (
       <div className="Footer">
-       <div className="flex justify-between px-20  bg-dull text-white py-8">
-           <div className="flex-column w-5/12 text-center justify-center">
+       <div className="flex justify-between px-40 bg-dull text-white py-2 h-full">
+           <div className="flex-column w-96 h-full text-center justify-center items-center">
                <div className="font-bold text-4xl text-white">
                Easy<b className="text-danger">Fix</b>
                </div>
-               <p className="mt-5">
-               Like all good things, the idea of EasyFix was born out of necessity. When you need help with small but important household chores, isn't it practically impossible to find trusted providers, who deliver consistently impeccable service, on time? Yes, that happened with us too. All the time. After trying dozens of other services which were just glorified directories, we decided to build EasyFix. EasyFix is the most convenient and hassle free way to get your housework done.
-               </p>
+               <p className="mt-5">EasyFix is India's largest and most trusted service platform. Our vision is to be one-stop service partner for every Indian.</p>
             </div>
            <div>
                <p className=" font-semibold text-2xl my-5">Links</p>    
