@@ -4,9 +4,9 @@ import { NavLink} from 'react-router-dom';
 const Navbar = () => {
   const[nav , setNav] = useState(true);
   return (
-    <div className="Navbar">
-      <nav className="bg-dull">
-        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div className="Navbar sticky top-0 z-50">
+      <nav className="bg-dull w-full">
+        <div className="mx-5 px-2 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-16">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               <button className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false" onClick={()=>setNav(!nav)}>
@@ -27,8 +27,8 @@ const Navbar = () => {
                 <div className="flex ml-0 lg:ml-72 space-x-4 text-white text-xl">
                   <NavLink to="/" exact activeClassName="text-ter"><li className=" list-none  px-3 py-2 rounded-md  ">Home</li></NavLink>
                   <NavLink to="/about" activeClassName="text-ter"><li className="list-none  px-3 py-2 rounded-md  ">About</li></NavLink>
-                  <NavLink to="/contact" activeClassName="text-ter"><li href="#" className="list-none  px-3 py-2 rounded-md  ">Contact</li></NavLink>
                   <NavLink to="/categories" activeClassName="text-ter"><li href="#" className="list-none  px-3 py-2 rounded-md  ">Categories</li></NavLink>
+                  <NavLink to="/contact" activeClassName="text-ter"><li href="#" className="list-none  px-3 py-2 rounded-md  ">Contact</li></NavLink>
                 </div>
               </div>
             </div>
@@ -37,7 +37,9 @@ const Navbar = () => {
                 <img class="rounded-full border border-gray-100 shadow-sm" src="https://randomuser.me/api/portraits/women/81.jpg" alt="user image" />
                 <div class="absolute top-0 right-0 h-3 w-3 my-1 border-2 border-white rounded-full bg-green-400 z-2"></div>
               </a>
+              
             </div>
+            <p className="text-white ml-5">Brindesh</p>
           </div>
         </div>
         <div  className={ nav ? 'hidden sm:hidden' : 'sm:hidden' }>

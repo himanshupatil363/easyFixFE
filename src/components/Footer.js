@@ -19,8 +19,8 @@ const Footer = () => {
            <div className="flex-column justify-center">
                 <NavLink to="/" exact activeClassName="text-ter"><p className="my-3">Home</p></NavLink>
                 <NavLink to="/about" activeClassName="text-ter"><p className="my-3">About</p></NavLink>
-                <NavLink to="/contact" activeClassName="text-ter"><p className="my-3">Conatcts</p></NavLink>
                 <NavLink to="/categories" activeClassName="text-ter"><p className="my-3">Categories</p></NavLink>
+                <NavLink to="/contact" activeClassName="text-ter"><p className="my-3">Conatcts</p></NavLink>
             </div>
             </div>
            <div className=""><p className=" font-semibold text-2xl my-5">social media</p>
