@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink} from 'react-router-dom';
+import brindesh from '../assets/images/brindesh.png'
 
 const Navbar = () => {
   const[nav , setNav] = useState(true);
@@ -34,7 +35,7 @@ const Navbar = () => {
             </div>
             <div class="relative w-12 h-12">
               <a href="#">
-                <img class="rounded-full border border-gray-100 shadow-sm" src="https://randomuser.me/api/portraits/women/81.jpg" alt="user image" />
+                <img class="rounded-full border border-gray-100 shadow-sm" src={brindesh}  alt="user image" />
                 <div class="absolute top-0 right-0 h-3 w-3 my-1 border-2 border-white rounded-full bg-green-400 z-2"></div>
               </a>
               
