@@ -10,18 +10,18 @@ function Hero() {
             <p className="text-primary text-7xl font-bold">Contact</p>
         </div>
         <div className="">
-          <ul className="flex justify-between mx-64 ">
+          <ul className="flex justify-between mx-40 ">
             <li className="bg-gray-300 flex-column content-center justify-center border-gray-300 border-2 bg-opacity-25 rounded-xl shadow-2xl p-10" style={{backdropFilter: `blur(6px)`}}>
               <img className=" h-14 w-full" src={envelope}/>
-              <p className="text-center mt-4  text-white">Email Id</p>
-            </li>
-            <li className="bg-gray-300 flex-column content-center justify-center border-gray-300 border-2 bg-opacity-25 rounded-xl shadow-2xl p-10" style={{backdropFilter: `blur(6px)`}}>
-              <img className=" h-14 w-full  "  src={phone}/>
-              <p className="text-center mt-4  text-white">Phone number</p>
+              <a href="mailto:easy0fix@gmail.com"><p className="text-center  text-white mt-10">easy0fix@gmail.com</p></a>
             </li>
             <li className="bg-gray-300 flex-column content-center justify-center border-gray-300 border-2 bg-opacity-25 rounded-xl shadow-2xl p-10" style={{backdropFilter: `blur(6px)`}}>
               <img className=" h-14 w-full " src={placeholder} />
-              <p className="text-center mt-4 text-white">Address </p>
+             <a href="https://g.page/mit-wpu?share"><p className="text-center mt-4 text-white">Survey No, 124, Jijau Masaheb Marg, Kothrud,<br /> Pune, Maharashtra<br/> 411038</p></a>
+            </li>
+            <li className="bg-gray-300 flex-column content-center justify-center border-gray-300 border-2 bg-opacity-25 rounded-xl shadow-2xl p-10" style={{backdropFilter: `blur(6px)`}}>
+              <img className=" h-14 w-full "  src={phone}/>
+              <a href="tel:+91 9876543210"><p className="text-center mt-10 text-white">+91 9876543210</p></a>
             </li>
           </ul>
         </div>

@@ -8,14 +8,14 @@ const Footer = () => {
     return (
       <div className="Footer">
        <div className="flex justify-between px-40 bg-dull text-white py-2 h-full">
-           <div className="flex-column w-96 h-full text-center justify-center items-center">
+           <div className="flex-column w-96 h-full justify-center items-center">
                <div className="font-bold text-5xl text-white mt-10">
                Easy<b className="text-danger">Fix</b>
                </div>
                <p className="mt-5">EasyFix is India's largest and most trusted service platform. Our vision is to be one-stop service partner for every Indian.</p>
             </div>
            <div>
-               <p className=" font-semibold text-3xl my-5">Links</p>    
+               <p className=" font-semibold text-2xl my-5">Links</p>    
            <div className="flex-column justify-center">
                 <NavLink to="/" exact activeClassName="text-ter"><p className="my-3">Home</p></NavLink>
                 <NavLink to="/about" activeClassName="text-ter"><p className="my-3">About</p></NavLink>
@@ -23,12 +23,12 @@ const Footer = () => {
                 <NavLink to="/contact" activeClassName="text-ter"><p className="my-3">Conatcts</p></NavLink>
             </div>
             </div>
-           <div className=""><p className=" font-semibold text-2xl my-5">social media</p>
+           <div className=""><p className=" font-semibold text-2xl my-5">Social media</p>
            <div className="flex justify-center my-6">
                <a><img className="h-8" href="" src={instagram} /></a>
                <a><img className="h-8 ml-8" src={facebook} /></a>
                <a><img className="h-8 ml-8" src={twitter} /></a>
-               <a href="mailto:brindachanchad00@gmail.com"><img  className="h-8 ml-8" src={gmail} /></a>
+               <a href="mailto:easy0fix@gmail.com"><img  className="h-8 ml-8" src={gmail} /></a>
                
            </div>
            <p className="font-semibold text-2xl my-4">Contact No</p>
