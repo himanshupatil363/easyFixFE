@@ -2,8 +2,8 @@ import React, { useDebugValue } from 'react';
 function Content() {
   return (
     <div className="Content">
-        <div className="flex justify-center">
-            <div className="py-4 bg-gray-300 border-2 border-gray-300 shadow-2xl w-full mx-40 my-10 rounded-2xl bg-opacity-25 text-black " style={{backdropFilter: `blur(8px)`}}>
+        <div className="flex justify-center my-20">
+            <div>
                 <div className="flex justify-center">
                     <div className="text-3xl m-10 font-bold">Who are we</div>
                 </div>
@@ -20,13 +20,6 @@ function Content() {
                     <p>Happy Customers</p></div>
                     <div><p className="text-2xl text-center text-gray-600 font-bold m-2">5</p>
                     <p>Cities</p></div>
-                </div>
-                <div className="flex justify-center mt-20">
-                    <div className="text-3xl m-10 font-bold">Our story so far</div>
-                </div>
-                <div className="text-center px-48 my-4 mb-20">
-                    <p className=" text-xl ">19 cities in India: Ahmedabad, Bangalore, Bhopal, Bhubaneswar, Chandigarh Tricity, Chennai, Delhi NCR, Hyderabad, Indore, Jaipur, Kolkata, Lucknow, Ludhiana, Mumbai, Nagpur, Pune, Surat, Vadodara, Visakhapatnam
-                    </p>
                 </div>
             </div>
         </div>  
