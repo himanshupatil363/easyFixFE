@@ -1,8 +1,9 @@
 import React from 'react';
+import Search from '../components/categories/search';
 function Categories() {
   return (
     <div className="Categories">
-        <p>Categories</p>
+       <Search />
     </div>
   );
 }
