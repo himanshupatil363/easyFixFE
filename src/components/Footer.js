@@ -25,10 +25,10 @@ const Footer = () => {
             </div>
            <div className=""><p className=" font-semibold text-2xl my-5">Social media</p>
            <div className="flex justify-center my-6">
-               <a><img className="h-8" href="" src={instagram} /></a>
-               <a><img className="h-8 ml-8" src={facebook} /></a>
-               <a><img className="h-8 ml-8" src={twitter} /></a>
-               <a href="mailto:easy0fix@gmail.com"><img  className="h-8 ml-8" src={gmail} /></a>
+               <a><img className="h-8" href="" src={instagram} alt=""/></a>
+               <a><img className="h-8 ml-8" src={facebook} alt=""/></a>
+               <a><img className="h-8 ml-8" src={twitter} alt=""/></a>
+               <a href="mailto:easy0fix@gmail.com"><img  className="h-8 ml-8" src={gmail} alt=""/></a>
                
            </div>
            <p className="font-semibold text-2xl my-4">Contact No</p>

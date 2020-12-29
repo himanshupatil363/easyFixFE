@@ -1,5 +1,5 @@
-import React, { useDebugValue } from 'react';
-function Content() {
+import React from 'react';
+const Content =  () => {
   return (
     <div className="Content">
         <div className="flex justify-center my-20">

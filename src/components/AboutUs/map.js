@@ -1,9 +1,9 @@
 import React from 'react';
 import about from '../../assets/images/about.jpg';
 import India from '../../assets/images/map.svg';
-function About() {
+const About = () => {
   return (
-    <div className="Map" className=" py-20 bg-cover mt-20" style={{ backgroundImage: `url(${about})` }}>
+    <div className="Map py-20 bg-cover mt-20" style={{ backgroundImage: `url(${about})` }}>
         <div className="py-4 bg-gray-300 border-2 border-gray-300 shadow-2xl mx-40 rounded-2xl bg-opacity-25 text-black " style={{backdropFilter: `blur(9px)`}}>
             <div className="flex-column text-center my-24">
                 <div className="text-5xl text-white font-bold">Our story so far</div>
@@ -11,7 +11,7 @@ function About() {
             </div>
             <div className="flex">
                 <div  className="h-screen w-11/12 object-contain">
-                  <img src={India} className="h-screen w-screen" />
+                  <img src={India} className="h-screen w-screen" alt="" />
                 </div>
                 <div className=" text-left w-3/12">
                     <p className=" text-xl ">

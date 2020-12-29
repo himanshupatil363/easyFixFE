@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink} from 'react-router-dom';
-import brindesh from '../assets/images/brindesh.png'
+// import brindesh from '../assets/images/brindesh.png'
 
 const Navbar = () => {
   const[nav , setNav] = useState(true);
@@ -28,27 +28,29 @@ const Navbar = () => {
                 <div className="flex ml-0 lg:ml-72 space-x-4 text-white text-xl">
                   <NavLink to="/" exact activeClassName="text-ter"><li className=" list-none  px-3 py-2 rounded-md  ">Home</li></NavLink>
                   <NavLink to="/about" activeClassName="text-ter"><li className="list-none  px-3 py-2 rounded-md  ">About</li></NavLink>
-                  <NavLink to="/categories" activeClassName="text-ter"><li href="#" className="list-none  px-3 py-2 rounded-md  ">Categories</li></NavLink>
-                  <NavLink to="/contact" activeClassName="text-ter"><li href="#" className="list-none  px-3 py-2 rounded-md  ">Contact</li></NavLink>
+                  <NavLink to="/categories" activeClassName="text-ter"><li className="list-none  px-3 py-2 rounded-md  ">Categories</li></NavLink>
+                  <NavLink to="/contact" activeClassName="text-ter"><li className="list-none  px-3 py-2 rounded-md  ">Contact</li></NavLink>
                 </div>
               </div>
             </div>
-            <div class="relative w-12 h-12">
+            {/* <div class="relative w-12 h-12">
               <a href="#">
                 <img class="rounded-full border border-gray-100 shadow-sm" src={brindesh}  alt="user image" />
                 <div class="absolute top-0 right-0 h-3 w-3 my-1 border-2 border-white rounded-full bg-green-400 z-2"></div>
               </a>
               
             </div>
-            <p className="text-white ml-5">Brindesh</p>
+            <p className="text-white ml-5">Brindesh</p> */}
+            <NavLink to="/login" className="px-7 py-2 rounded mx-2 bg-dpri text-white">login</NavLink>
+            <NavLink to="/register" className="bg-white px-7 py-2 rounded">register</NavLink>
           </div>
         </div>
         <div  className={ nav ? 'hidden sm:hidden' : 'sm:hidden' }>
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <a href="#" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Categories</a>
+           <NavLink to="/"> <li  className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Home</li></NavLink>
+           <NavLink to="/about"> <li  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</li></NavLink>
+           <NavLink to="/contact"> <li  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</li></NavLink>
+           <NavLink to="/categories"> <li  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Categories</li></NavLink>
           </div>
         </div>
       </nav>

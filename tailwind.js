@@ -20,6 +20,7 @@ module.exports = {
       'secondary':'#f1d37e',
       'dull':'#4D5256',
       'ter':'#AEE696',
+      'dpri':'#92AADB',
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,

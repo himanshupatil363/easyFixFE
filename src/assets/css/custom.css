@@ -1,8 +1,3 @@
-*{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+.name{
+    
 }
-*::selection {
-    background: #eb425352 !important; /* WebKit/Blink Browsers */
-  }

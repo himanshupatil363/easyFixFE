@@ -11,10 +11,10 @@ const Tweets = () => {
                     <p className=" text-5xl font-bold text-dull my-32 " >What customers are saying about us</p>
                 </div>
                 <div className="flex  justify-between mb-20">
-                    <img src={t1} className=" h-44 p-2 rounded-3xl m-3 " />
-                    <img src={t2} className=" h-44 p-2 rounded-3xl m-3 " />
-                    <img src={t3} className=" h-44 p-2 rounded-3xl m-3 " />
-                    <img src={t4} className=" h-44 p-2 rounded-3xl m-3 " />
+                    <img src={t1} className=" h-44 p-2 rounded-3xl m-3 " alt="" />
+                    <img src={t2} className=" h-44 p-2 rounded-3xl m-3 " alt="" />
+                    <img src={t3} className=" h-44 p-2 rounded-3xl m-3 " alt="" />
+                    <img src={t4} className=" h-44 p-2 rounded-3xl m-3 " alt="" />
                 </div>
             </div>
         </div>
