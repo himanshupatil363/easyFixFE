@@ -27,8 +27,8 @@ const Navbar = () => {
               <div className="hidden sm:block sm:ml-6">
                 <div className="flex ml-0 lg:ml-72 space-x-4 text-dull text-xl">
                  <li className="list-none  px-6 py-2 rounded-md">Dashboard</li>
-                 <li className="list-none  px-6 py-2 rounded-md">Profile</li>
-                 <li className="list-none  px-6 py-2 rounded-md">Orders</li>
+                 <NavLink to="/profile" className="list-none  px-6 py-2 rounded-md">Profile</NavLink>
+                 <NavLink to ="/orders" className="list-none  px-6 py-2 rounded-md">Orders</NavLink>
                  <NavLink to="/login" exact activeClassName="text-ter" >login</NavLink>
                  <NavLink to="/register" exact activeClassName="text-ter" >register</NavLink>
                 </div>
