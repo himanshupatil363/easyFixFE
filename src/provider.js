@@ -4,6 +4,7 @@ import './assets/css/custom.css'
 import Home from './Admin/pages/home'
 import Login from './Admin/pages/auth/login'
 import Register from './Admin/pages/auth/register'
+import Forgot from './Admin/pages/auth/forgot'
 import {BrowserRouter as Router, Switch , Route} from 'react-router-dom';
 const Provider =()=>{
 return(
@@ -13,6 +14,7 @@ return(
             <Route path="/" exact component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
+            <Route path="/forgot" component={Forgot} />
         </Switch>
         </div>
     </Router>

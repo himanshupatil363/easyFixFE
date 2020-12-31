@@ -1,6 +1,7 @@
 import React from 'react'
 import leaf from '../../assets/home/leaf.png'
 import login from '../../assets/login.svg'
+import { NavLink} from 'react-router-dom';
 const Login = () => {
     return(
         <div className="Login h-screen w-full bg-adbg flex justify-center content-center items-center bg-no-repeat bg-cover " style={{backgroundImage:`url(${leaf})`,backgroundPosition:`120% 220%`,backgroundSize:`40%`}}>
@@ -16,10 +17,10 @@ const Login = () => {
                <input type="email" className=" border-b-2 border-adpri bg-adbg outline-none" />
                <label className="mt-8">Enter Password</label>
                <input type="password" className="border-b-2 border-adpri bg-adbg outline-none"/>
-               <i to="/forgot" className="flex justify-end mt-2 text-adpri">Forgot Password?</i>
+               <NavLink to="/forgot" className="flex justify-end mt-2 text-adpri">Forgot Password?</NavLink>
                <input type="submit" className="mt-10 py-2 bg-adpri text-adbg rounded-md border-2 border-adpri outline-none cursor-pointer hover:bg-adbg hover:text-adpri  duration-1000  font-semibold text-lg mx-10" value="Login" />
              </form>
-              <p className="my-8 mb-10 ml-2">Don't have an account ?<i to="/register" className="text-adpri"> Create one</i></p>
+              <p className="my-8 mb-10 ml-2">Don't have an account ?<NavLink to="/register" className="text-adpri"> Create one</NavLink></p>
           </div>
         </div>
     </div>
