@@ -33,14 +33,6 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            {/* <div class="relative w-12 h-12">
-              <a href="#">
-                <img class="rounded-full border border-gray-100 shadow-sm" src={brindesh}  alt="user image" />
-                <div class="absolute top-0 right-0 h-3 w-3 my-1 border-2 border-white rounded-full bg-green-400 z-2"></div>
-              </a>
-              
-            </div>
-            <p className="text-white ml-5">Brindesh</p> */}
             <NavLink to="/login" className="px-7 py-2 rounded mx-2 bg-dpri text-white">login</NavLink>
             <NavLink to="/register" className="bg-white px-7 py-2 rounded">register</NavLink>
           </div>

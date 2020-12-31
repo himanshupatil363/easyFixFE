@@ -1,8 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from '../src/app'
+// import User from './user'
+import Provider from './provider'
 ReactDOM.render(
 <div>
-    <App />
+    {/* <User /> */}
+    <Provider />
 </div>
 ,document.getElementById('root'));

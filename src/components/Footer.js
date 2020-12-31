@@ -25,9 +25,9 @@ const Footer = () => {
             </div>
            <div className=""><p className=" font-semibold text-2xl my-5">Social media</p>
            <div className="flex justify-center my-6">
-               <a><img className="h-8" href="" src={instagram} alt=""/></a>
-               <a><img className="h-8 ml-8" src={facebook} alt=""/></a>
-               <a><img className="h-8 ml-8" src={twitter} alt=""/></a>
+               <button className="focus:outline-none outline-none"><img className="h-8" src={instagram} alt=""/></button>
+               <button className="focus:outline-none outline-none"><img className="h-8 ml-8" src={facebook} alt=""/></button>
+               <button className="focus:outline-none outline-none"><img className="h-8 ml-8" src={twitter} alt=""/></button>
                <a href="mailto:easy0fix@gmail.com"><img  className="h-8 ml-8" src={gmail} alt=""/></a>
                
            </div>

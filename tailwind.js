@@ -21,6 +21,8 @@ module.exports = {
       'dull':'#4D5256',
       'ter':'#AEE696',
       'dpri':'#92AADB',
+      'adpri':'#106A41',
+      'adbg':'#F8EFEF',
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
