@@ -18,7 +18,7 @@ return(
             <Route path="/register" component={Register} />
             <Route path="/forgot" component={Forgot} />
             <Route path="/profile" component={Profile}/>
-            <Route path="/profile" component={Orders}/>
+            <Route path="/orders" component={Orders}/>
         </Switch>
         </div>
     </Router>
