@@ -7,7 +7,7 @@ const Info = () =>{
             <p className="text-4xl font-bold text-gray-300 text-center mt-4">Profile</p>
                 <img src = {Brindesh} className="rounded-full h-64 border-2 border-adpri p-2 mt-4" alt=""/>
                 <p className="text-center text-xl font-bold text-adpri mt-8">Brindesh Chanchad</p>
-                <a href="mailto:brindachanchad00@gmail.com">brindachanchad00@gmail.com</a>
+                <a className="flex justify-center" href="mailto:brindachanchad00@gmail.com">brindachanchad00@gmail.com</a>
                 <hr className="my-5"/>
                 <p className="text-center text-xl font-bold text-adpri mt-5">work Experience</p>
             </div>

@@ -8,7 +8,7 @@ export const orderData = [
       status: "delivered"
     },
     {
-      name: "Brindesh Chnachad",
+      name: "Brindesh Chanchad",
       address: "100 , Sanskar villa opp. D-mart Sarthana jakat naka, Surat",
       time: "9:00 AM" ,
       date: "10/11/2020" ,
@@ -22,5 +22,5 @@ export const orderData = [
       date: "22/09/2021" ,
       amt: "5000" ,
       status: "refunded"
-    },    
+    }, 
   ];
