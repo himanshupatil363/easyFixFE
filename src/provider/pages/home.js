@@ -3,7 +3,7 @@ import Hero from '../components/home/hero'
 import Navbar from '../components/navbar'
 const Home = () => {
     return(
-        <div className="Home bg-adbg">
+        <div className="Home">
             <Navbar />
             <Hero />
         </div>

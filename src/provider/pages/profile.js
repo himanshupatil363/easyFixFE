@@ -4,7 +4,7 @@ import Info from '../components/profile/info'
 import Update from '../components/profile/update'
 const Profile = () => {
     return(
-        <div className="Profile bg-adbg">
+        <div className="Profile">
             <Navbar />
             <div className="flex justify-around mx-20 bg-white shadow-xl rounded-xl">
                 <Info />

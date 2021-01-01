@@ -22,7 +22,7 @@ module.exports = {
       'ter':'#AEE696',
       'dpri':'#92AADB',
       'adpri':'#106A41',
-      'adbg':'#F8EFEF',
+      'adbg':'#F2E7E7',
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
