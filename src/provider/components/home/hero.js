@@ -6,7 +6,7 @@ const Hero = () => {
         <div className="Hero m-0 p-0">
             <div className="bg-cover h-screen bg-no-repeat" style={{backgroundImage :`url(${b})`,backgroundPosition:`100% 100%`,backgroundSize:`80%`}}>
                 <div className="text-6xl sm:text-7xl text-green-600 pt-1 sm:pt-2 mx-10 sm:mx-0 sm:my-24 sm:ml-40">
-                    <p className="mt-1 sm:mt-14 text-dull font-bold">Tranform your business </p>
+                    <p className="mt-1 sm:mt-14 text-dull font-bold">Transform your business </p>
                     <div className="text-6xl sm:text-5xl mt-10 font-bold tracking-wide">
                         <Typewriter
                             options={{
