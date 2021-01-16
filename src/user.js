@@ -6,7 +6,8 @@ import Categories from './pages/categories'
 import About from './pages/about'
 import Login from './pages/auth/login'
 import Register from './pages/auth/register'
-import Forgot from './pages/auth/forgot' 
+import Forgot from './pages/auth/forgot'
+import Api from './pages/api'
 import {BrowserRouter as Router, Switch , Route} from 'react-router-dom';
 const App = () => {
 return(
@@ -20,6 +21,7 @@ return(
                 <Route path="/login" exact component={Login} />
                 <Route path="/register" component={Register} />
                 <Route path="/forgot" component={Forgot} />
+                <Route path="/api" component={Api} />
             </Switch>
         </div>
     </Router>
