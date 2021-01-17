@@ -4,7 +4,7 @@ const Api = () => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
     useEffect(() => {
-      fetch("http://localhost:5000/user/register")
+      fetch("http://localhost:9999/user/all")
         .then(res => res.json())
         .then(
           (result) => {

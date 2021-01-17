@@ -23,6 +23,8 @@ module.exports = {
       'dpri':'#92AADB',
       'adpri':'#106A41',
       'adbg':'#F2E7E7',
+      'adm':'#E63946',
+      'admdrk':'#3F3D56',
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,

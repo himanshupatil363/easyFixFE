@@ -9,7 +9,7 @@ import Register from './pages/auth/register'
 import Forgot from './pages/auth/forgot'
 import Api from './pages/api'
 import {BrowserRouter as Router, Switch , Route} from 'react-router-dom';
-const App = () => {
+const User = () => {
 return(
     <Router>
         <div>
@@ -27,4 +27,4 @@ return(
     </Router>
 )
 }
-export default App; 
+export default User; 
