@@ -25,6 +25,6 @@ return(
             </Switch>
         </div>
     </Router>
-)
+    )
 }
-export default User; 
+export default User;
