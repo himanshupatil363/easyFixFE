@@ -32,7 +32,6 @@ const Navbar = () => {
               </div>
             </div>
             <NavLink to="/login" className="px-7 py-2 rounded mx-2 bg-dpri text-white">login</NavLink>
-            <NavLink to="/register" className="bg-white px-7 py-2 rounded">register</NavLink>
           </div>
         </div>
         <div  className={ nav ? 'hidden sm:hidden' : 'sm:hidden' }>
