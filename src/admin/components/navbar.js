@@ -4,7 +4,7 @@ const Navbar = () => {
     <div classname="navbar ">
       <div classname="flex-column justify-items-center">
         <ul className="bg-gray-600 p-12 text-xl text-white h-screen">
-            <li className="py-4"><NavLink to="/admin/">Home</NavLink></li>
+            <li className="py-4"><NavLink to="/admin/">Dashboard</NavLink></li>
             <li className="py-4"><NavLink to="/admin/login">Login</NavLink></li>
             <li className="py-4"><NavLink to="/admin/users">Users</NavLink></li>
             <li className="py-4"><NavLink to="/admin/provider">Provider</NavLink></li>
