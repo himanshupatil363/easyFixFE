@@ -1,6 +1,6 @@
 import './assets/css/main.css'
 import './assets/css/custom.css'
-import Home from './admin/pages/home'
+import Dashboard from './admin/pages/dashboard'
 import Login from './admin/pages/auth/login'
 import {BrowserRouter as Router, Switch , Route} from 'react-router-dom';
 import User from './admin/pages/users'
@@ -15,7 +15,7 @@ return(
     <Router>
         <div>
             <Switch>
-                <Route path="/admin/" exact component={Home} />
+                <Route path="/admin/" exact component={Dashboard} />
                 <Route path="/admin/login" exact component={Login} />
                 <Route path="/admin/users" component={User} />
                 <Route path="/admin/provider" component={Provider} />
