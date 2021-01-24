@@ -5,10 +5,12 @@ import orders from '../../assets/home/orders.svg'
 import categories from '../../assets/home/categories.svg'
 import providers from '../../assets/home/providers.svg'
 import Chart from '../../components/dashboard/charts'
+import Pan from '../../components/uppane'
 const Hero = () =>{
     return(
-        <div className="Hero w-full m-12 flex flex-col">
-            <div className="flex w-full justify-between">
+        <div className="Hero w-full ml-60 flex flex-col">
+        <Pan />
+            <div className="flex w-full justify-between mt-12">
                 <Box name="Orders" amount="100" progress="32" icon={orders}/>
                 <Box name="Categories" amount="200" progress="62" icon={categories}/>
                 <Box name="Users" amount="40000" progress="91" icon={users}/>

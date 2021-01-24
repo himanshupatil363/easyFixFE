@@ -5,6 +5,6 @@ import Provider from './admin'
 ReactDOM.render(
 <div>
     {/* <User /> */}
-    <Provider />
+    <Provider/>
 </div>
 ,document.getElementById('root'));

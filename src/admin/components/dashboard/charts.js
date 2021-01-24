@@ -2,7 +2,7 @@ import React from 'react'
 import {Bar , Doughnut} from 'react-chartjs-2'
 const Charts = () =>{
     const data = {
-        labels: ['Brindesh', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Brinda', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3],
@@ -26,17 +26,23 @@ const Charts = () =>{
         }]
     }
     return(
-        <div className="">
+        <div>
+        <div className="my-16 bg-white h-96 p-8 rounded-xl shadow-xl">
             <Bar
                 data={data}
                 width={200}
-                height={200}
+                height={400}
                 options={{ maintainAspectRatio: false }}
             />
+            </div>
+            <div className="my-16 bg-white h-96 p-8 rounded-xl shadow-xl">
             <Doughnut 
                 data={data}
-                width={100}
-                height={30}/>
+                width={50}
+                height={30}
+                options={{ maintainAspectRatio: false }}    
+                />
+                </div>
         </div>
     );
 }
