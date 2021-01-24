@@ -7,7 +7,7 @@ const Box = (props) =>{
             <p className=" py-5 font-bold text-3xl">{props.amount}</p>
             <p><img className="h-8 my-5" src={props.icon} alt="ok"></img></p>
         </p>
-            <div className="overflow-hidden h-2 w-56 mb-4 text-xs flex rounded bg-blue-200">
+            <div className="overflow-hidden h-2 w-56 mt-8 text-xs flex rounded bg-blue-200">
                 <div style={{ width: props.progress + 'px' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500">
                 </div>
             </div>

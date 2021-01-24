@@ -13,7 +13,7 @@ import Offers from './admin/pages/offers'
 const Admin = () => {
 return(
     <Router>
-        <div>
+        <div className="h-full">
             <Switch>
                 <Route path="/admin/" exact component={Dashboard} />
                 <Route path="/admin/login" exact component={Login} />
