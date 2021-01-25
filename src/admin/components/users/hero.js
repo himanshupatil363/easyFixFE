@@ -1,7 +1,7 @@
 import React,{ useState, useEffect } from 'react'
 import axios from 'axios'
 import Up from '../uppane'
-
+import Tab from './table'
 const Hero  = () =>{
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -21,9 +21,7 @@ const Hero  = () =>{
     return(
         <div className="Hero w-full ml-60 flex flex-col">
             <Up />
-           <div>
-           
-            </div>
+            <Tab posts={posts} loading={loading}/>
         </div>
     );
 }
