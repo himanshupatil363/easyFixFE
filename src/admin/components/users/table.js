@@ -23,35 +23,34 @@ const Table =({posts , loading})=>{
                       <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Joined at
                       </th>
-
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
                     {
-                        posts.map(post =>(
-                            <tr key={post.id}>
-                              <td className="px-6 py-4 whitespace-nowrap">
-                                <div className="flex items-center">
-                                  <div className="flex-shrink-0 h-10 w-10">
-                                    <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60" alt="" />
-                                  </div>
-                                  <div className="ml-4 font-semibold">
-                                      {post.name}
-                                  </div>
-                                </div>
-                              </td>
-                              <td className="px-6 py-4 whitespace-nowrap">
-                                {post.emailid}
-                              </td>
-                              <td className="px-6 py-4 whitespace-nowrap">
-                                {post.city}
-                              </td>
-                              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                ..
-                              </td>
-                            </tr>
-                        ))
-                     }
+                      posts.map(post =>(
+                        <tr key={post.id}>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="flex items-center">
+                              <div className="flex-shrink-0 h-10 w-10">
+                                <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60" alt="" />
+                              </div>
+                              <div className="ml-4 font-semibold">
+                                {post.name}
+                              </div>
+                            </div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            {post.emailid}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            {post.city}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                            ..
+                          </td>
+                        </tr>
+                      ))
+                    }
                   </tbody>
                 </table>
               </div>
