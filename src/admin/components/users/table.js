@@ -21,7 +21,7 @@ const Table =({posts , loading})=>{
                         City
                       </th>
                       <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Joined at
+                        Joined on
                       </th>
                     </tr>
                   </thead>
@@ -46,7 +46,7 @@ const Table =({posts , loading})=>{
                             {post.city}
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                            {post.joinedAt}
+                            {`${('0'+new Date(post.joinedAt).getDate()).slice(-2)}-${('0'+new Date(post.joinedAt).getMonth() + 1).slice(-2)}-${new Date(post.joinedAt).getFullYear()} At ${('0'+new Date(post.joinedAt).getHours()%12).slice(-2) ? ('0'+new Date(post.joinedAt).getHours()%12).slice(-2) : 12}:${('0'+new Date(post.joinedAt).getMinutes()).slice(-2)} ${new Date(post.joinedAt).getHours() >= 12 ? 'PM' : 'AM'}`}
                           </td>
                         </tr>
                       ))
