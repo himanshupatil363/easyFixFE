@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 // import User from './user'
-import Provider from './user'
+import Provider from './admin'
 ReactDOM.render(
 <div>
     {/* <User /> */}

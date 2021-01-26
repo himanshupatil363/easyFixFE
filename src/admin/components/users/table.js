@@ -40,13 +40,13 @@ const Table =({posts , loading})=>{
                             </div>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
-                            {post.emailid}
+                            {post.emailId}
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
                             {post.city}
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                            ..
+                            {post.joinedAt}
                           </td>
                         </tr>
                       ))
