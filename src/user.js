@@ -30,8 +30,13 @@ const User = () => {
                 {headers: {"x-auth-token":token}}
             );
             if(tokenRes.data){
-                
+                const userRes = await Axios.get("http://localhost:9990/user/" , {headers:{"x-auth-token" : token}})
+                setUserData({
+                    token,
+                    user: userRes.data,
+                });
             }
+            
         }
         checkLoggedIn()
     },[]);
