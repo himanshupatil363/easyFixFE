@@ -12,7 +12,6 @@ const Navbar = () => {
         user: undefined
       })
       localStorage.setItem("auth-token","");
-      console.log(userData)
   };
   return (
     <div className="Navbar sticky top-0 z-50">
