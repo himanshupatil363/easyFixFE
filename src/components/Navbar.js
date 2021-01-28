@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState ,useContext } from 'react';
 import { NavLink} from 'react-router-dom';
+import UserContext from '../context/userContext'
 // import brindesh from '../assets/images/brindesh.png'
 
 const Navbar = () => {
   const[nav , setNav] = useState(true);
+  const {userData, setUserData} = useContext(UserContext);
+  const logout = () =>{
+      setUserData({
+        token: undefined,
+        user: undefined
+      })
+      localStorage.setItem("auth-token","");
+  };
   return (
     <div className="Navbar sticky top-0 z-50">
       <nav className="bg-dull w-full">
@@ -33,10 +42,16 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <NavLink to="/login" className="px-7 py-2 rounded mx-2 bg-dpri text-white">login</NavLink>
-            <NavLink to="/register" className="bg-white px-7 py-2 rounded">register</NavLink>
+            {
+              userData.user ? 
+              <button onClick={logout} className="px-7 py-2 rounded mx-2 bg-dpri text-white">logout</button> :
+              <>
+                <NavLink to="/login" className="px-7 py-2 rounded mx-2 bg-dpri text-white">login</NavLink>
+                <NavLink to="/register" className="bg-white px-7 py-2 rounded">register</NavLink>
+              </>
+            }
           </div>
-        </div>
+        </div> 
         <div  className={ nav ? 'hidden sm:hidden' : 'sm:hidden' }>
           <div className="px-2 pt-2 pb-3 space-y-1">
            <NavLink to="/"> <li  className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Home</li></NavLink>

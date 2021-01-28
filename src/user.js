@@ -36,7 +36,6 @@ const User = () => {
                     user: userRes.data,
                 });
             }
-            
         }
         checkLoggedIn()
     },[]);
