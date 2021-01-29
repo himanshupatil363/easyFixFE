@@ -11,6 +11,7 @@ function Home() {
   const {userData} = useContext(UserContext);
   const history = useHistory();
   useEffect(()=> {
+    console.log(userData.user)
     if(!userData.user) 
     {history.push("/login")}
   });

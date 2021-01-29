@@ -19,6 +19,7 @@ const User = () => {
     });
     useEffect(()=>{
         const checkLoggedIn = async () =>{
+            
             let token = localStorage.getItem("auth-token");
             if(token==null){
                 localStorage.setItem("auth-token","");
@@ -31,6 +32,7 @@ const User = () => {
             );
             if(tokenRes.data){
                 const userRes = await Axios.get("http://localhost:9990/user/" , {headers:{"x-auth-token" : token}})
+                console.log(userRes)
                 setUserData({
                     token,
                     user: userRes.data,
