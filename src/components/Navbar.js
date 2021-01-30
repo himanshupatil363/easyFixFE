@@ -1,18 +1,9 @@
-import React, { useState ,useContext } from 'react';
+import React, { useState } from 'react';
 import { NavLink} from 'react-router-dom';
-import UserContext from '../context/userContext'
 // import brindesh from '../assets/images/brindesh.png'
 
 const Navbar = () => {
   const[nav , setNav] = useState(true);
-  const {userData, setUserData} = useContext(UserContext);
-  const logout = () =>{
-      setUserData({
-        token: undefined,
-        user: undefined
-      })
-      localStorage.setItem("auth-token","");
-  };
   return (
     <div className="Navbar sticky top-0 z-50">
       <nav className="bg-dull w-full">
@@ -42,18 +33,10 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            {
-              userData.user ? 
-              <>
-              <p></p>
-              <button onClick={logout} className="px-7 py-2 rounded mx-2 bg-dpri text-white">logout</button>
-              </>
-               :
-              <>
+
                 <NavLink to="/login" className="px-7 py-2 rounded mx-2 bg-dpri text-white">login</NavLink>
                 <NavLink to="/register" className="bg-white px-7 py-2 rounded">register</NavLink>
-              </>
-            }
+
           </div>
         </div> 
         <div  className={ nav ? 'hidden sm:hidden' : 'sm:hidden' }>
