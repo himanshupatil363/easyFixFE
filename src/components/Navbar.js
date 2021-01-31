@@ -1,10 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from "axios";
 import { NavLink} from 'react-router-dom';
 // import brindesh from '../assets/images/brindesh.png'
 
 const Navbar = () => {
   const[nav , setNav] = useState(true);
-  return (
+  const logoutHandler = () =>{
+    localStorage.removeItem("authToken");
+  };
+  const [error, setError] = useState("");
+  const [privateData, setPrivateData] = useState("");
+  useEffect(() => {
+    const fetchPrivateDate = async () => {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("authToken")}`,
+        },
+      };
+
+      try {
+        const { data } = await axios.get("http://localhost:9990/api/private", config);
+        setPrivateData(data.data);
+      } catch (error) { 
+        localStorage.removeItem("authToken");
+        setError("You are not authorized please login");
+      }
+    };
+    fetchPrivateDate();
+  }, []);
+  return error ? (
+    <span className="error-message">{error}</span>
+  ) : (
     <div className="Navbar sticky top-0 z-50">
       <nav className="bg-dull w-full">
         <div className="mx-5 px-2 sm:px-6 lg:px-8">
@@ -33,10 +60,10 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-
-                <NavLink to="/login" className="px-7 py-2 rounded mx-2 bg-dpri text-white">login</NavLink>
-                <NavLink to="/register" className="bg-white px-7 py-2 rounded">register</NavLink>
-
+            <p className="text-white">
+              Hello, {privateData.username}
+            </p>
+            <NavLink to="/login" className="px-7 py-2 rounded mx-2 bg-dpri text-white" onClick={logoutHandler}>logout</NavLink>
           </div>
         </div> 
         <div  className={ nav ? 'hidden sm:hidden' : 'sm:hidden' }>

@@ -8,7 +8,7 @@ import Login from './pages/auth/login'
 import Register from './pages/auth/register'
 import Forgot from './pages/auth/forgot'
 import passwordreset from './pages/auth/ResetPassword'
-import PrivateScreen from './pages/PrivateScreen'
+import Home from './pages/home'
 import Api from './pages/api'
 import PrivateRoute from './components/routing/PrivateRoute'
 import {BrowserRouter as Router, Switch , Route} from 'react-router-dom';
@@ -16,11 +16,10 @@ const User = () => {
 return(
     <Router>
             <Switch>
-                
-                <PrivateRoute exact path="/" component={PrivateScreen}/> 
-                <Route path="/categories" component={Categories} />
-                <Route path="/about" component={About} />
-                <Route path="/contact" component={Contact} />
+                <PrivateRoute exact path="/" component={Home}/> 
+                <PrivateRoute path="/categories" component={Categories} />
+                <PrivateRoute path="/about" component={About} />
+                <PrivateRoute path="/contact" component={Contact} />
                 <Route path="/login" exact component={Login} />
                 <Route path="/register" component={Register} />
                 <Route path="/forgot" component={Forgot} />
