@@ -59,7 +59,7 @@ const submitFeedback = async (e) => {
                         </label>
                         <textarea className="outline-none border-2 border-gray-500 my-2 w-96 hover:border-t-2 focus:border-primary h-32 rounded-lg hover:border-primary opacity-80  transition ease-in-out duration-500" name="msg" id="msg" onChange={(e)=>setMsg(e.target.value)}/>
                         {error && <span className="error-message">{error}</span>}
-                        {success && <span className="success-message">hello ,{success} your feedback is successfully submimtted</span>}
+                        {success && <span className="success-message">hello ,{success} your feedback is successfully submitted</span>}
                         <button className="bg-dull text-white rounded-xl px-10 py-3 text-lg  duration-1000  hover:bg-white hover:text-green-500 text-center mt-10 focus:outline-none outline-none"  type="submit">Send Message</button>
                     </form>
                 </div>                      
