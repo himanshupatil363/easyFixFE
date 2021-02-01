@@ -25,7 +25,7 @@ const submitFeedback = async (e) => {
         },
         config
       );
-      console.log(data)
+      
       setSuccess(data.feedback.name);
       setTimeout(() => {
         setSuccess("");
@@ -36,6 +36,7 @@ const submitFeedback = async (e) => {
         setError("");
       }, 5000);
     }
+    e.target.reset();
   };
   return (
     <div className="Message bg-cover" style={{backgroundImage:`url(${contact})`}}>

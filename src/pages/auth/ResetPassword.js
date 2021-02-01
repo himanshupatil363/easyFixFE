@@ -35,8 +35,6 @@ const ResetPassword = ({ history, match }) => {
         },
         config
       );
-
-      console.log(data);
       setSuccess(data.data);
     } catch (error) {
       setError(error.response.data.error);
