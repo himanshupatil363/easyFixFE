@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+// import axios from "axios";
 import { NavLink} from 'react-router-dom';
 // import brindesh from '../../assets/images/brindesh.png'
 const Navbar = () => {
   const[nav , setNav] = useState(true);
+  const logoutHandler = () =>{
+    localStorage.removeItem("authToken");
+  };
+
   return (
     <div className="Navbar sticky top-0 z-50 bg-cover" >
       <nav className="w-full">
@@ -29,20 +34,10 @@ const Navbar = () => {
                  <NavLink to="/dashboard" className="list-none  px-6 py-2 rounded-md">Dashboard</NavLink>
                  <NavLink to="/profile" className="list-none  px-6 py-2 rounded-md">Profile</NavLink>
                  <NavLink to ="/orders" className="list-none  px-6 py-2 rounded-md">Orders</NavLink>
-                 <NavLink to="/login" exact activeClassName="text-ter" >login</NavLink>
-                 <NavLink to="/register" exact activeClassName="text-ter" >register</NavLink>
-                 
                 </div>
               </div>
             </div>
-             {/* <div className="relative w-12 h-12">
-              <a href="#">
-                <img className="rounded-full border border-gray-100" src={brindesh}  alt="user image" />
-                <div className="absolute top-0 right-0 h-3 w-3 my-1 border-2 border-white rounded-full bg-green-400 z-2"></div>
-              </a>
-              
-            </div>
-            <p className=" text-dull ml-5">Brindesh</p> */}
+            <NavLink to="/login" className="px-7 py-2 rounded mx-2 bg-adpri text-white" onClick={logoutHandler}>logout</NavLink>
           </div>
         </div>
         <div  className={ nav ? 'hidden sm:hidden' : 'sm:hidden' }>
