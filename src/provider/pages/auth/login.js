@@ -49,7 +49,7 @@ const Login = ({history}) => {
             <p className="text-adpri text-3xl font-bold pb-2">Welcome to EasyFix</p>
             {error && <span className="error-message">{error}</span>}
              <form className="flex flex-col mt-2" onSubmit={loginHandler}>
-               <label className="mt-10">Enter Email Id</label>
+               <label className="mt-10" autoComplete="true" >Enter Email Id</label>
                <input type="email" className=" border-b-2 border-adpri bg-adbg outline-none" onChange={(e) => setEmail(e.target.value)} value={email}/>
                <label className="mt-8">Enter Password</label>
                <input type="password" className="border-b-2 border-adpri bg-adbg outline-none" onChange={(e) => setPassword(e.target.value)} value={password}/>
