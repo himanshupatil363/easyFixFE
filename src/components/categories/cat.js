@@ -1,8 +1,22 @@
-import React from 'react';
+import {useEffect,useState} from 'react';
 import '../../assets/css/custom.css'
+import axios from 'axios';
 import Cats from '../../components/categories/d_cat' 
-import { catData } from '../../data/catData'
 const Cat =()=>{
+const [catData,setCatData]=useState([]);
+    useEffect(() => {
+        const fetchCategories = async () => {
+          try {
+            const { data } = await axios.get("http://localhost:9990/service/all");
+            setCatData(data);
+
+        } catch (error) {
+              console.log(error)
+               
+          }
+        };
+        fetchCategories();
+      }, []);
     return(
         <div className="Cat bg-primary">
             <div className="name">
@@ -12,6 +26,7 @@ const Cat =()=>{
                                 <Cats 
                                     key={key}
                                     name={data.name}
+                                    link={data.img}
                                 />
                             );
                         })

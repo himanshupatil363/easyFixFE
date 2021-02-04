@@ -13,7 +13,6 @@ const Hero  = () =>{
             const res = await axios.get('http://localhost:9990/service/all');
             setPosts(res.data);
             setLoading(false);
-            
         }
         fetchPosts();
 

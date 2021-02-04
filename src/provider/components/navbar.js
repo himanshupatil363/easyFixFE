@@ -32,7 +32,6 @@ const Navbar = () => {
                 <div className="flex ml-0 lg:ml-72 space-x-4 text-dull text-xl">
                  <NavLink to="/" className="list-none  px-6 py-2 rounded-md">Home</NavLink>
                  <NavLink to="/dashboard" className="list-none  px-6 py-2 rounded-md">Dashboard</NavLink>
-                 <NavLink to="/profile" className="list-none  px-6 py-2 rounded-md">Profile</NavLink>
                  <NavLink to ="/orders" className="list-none  px-6 py-2 rounded-md">Orders</NavLink>
                 </div>
               </div>

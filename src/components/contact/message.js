@@ -14,7 +14,6 @@ const submitFeedback = async (e) => {
         "Content-Type": "application/json",
       },
     };
-
     try {
       const { data } = await axios.post(
         "/user/feedback",

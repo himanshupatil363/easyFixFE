@@ -10,20 +10,21 @@ import Subcategory from './admin/pages/subcategory'
 import Steps from './admin/pages/steps'
 import Packages from './admin/pages/packages'
 import Offers from './admin/pages/offers'
+import PrivateRoute from './components/routing/PrivateRoute'
 const Admin = () => {
 return(
     <Router>
         <div className="h-full">
             <Switch>
-                <Route path="/admin/" exact component={Dashboard} />
-                <Route path="/admin/login" exact component={Login} />
-                <Route path="/admin/users" component={User} />
-                <Route path="/admin/provider" component={Provider} />
-                <Route path="/admin/category" component={Category} />
-                <Route path="/admin/subcategory" component={Subcategory} />
-                <Route path="/admin/steps" component={Steps} />
-                <Route path="/admin/packages" component={Packages} />
-                <Route path="/admin/offers" component={Offers} />
+                <PrivateRoute path="/" exact component={Dashboard} />
+                <Route path="/login" exact component={Login} />
+                <PrivateRoute path="/users" component={User} />
+                <PrivateRoute path="/provider" component={Provider} />
+                <PrivateRoute path="/category" component={Category} />
+                <PrivateRoute path="/subcategory" component={Subcategory} />
+                <PrivateRoute path="/steps" component={Steps} />
+                <PrivateRoute path="/packages" component={Packages} />
+                <PrivateRoute path="/offers" component={Offers} />
             </Switch>
         </div>
     </Router>
