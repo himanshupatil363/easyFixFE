@@ -35,7 +35,6 @@ const Login = ({history}) => {
       }, 5000);
     }
   };
-  
     return(
         <div className="Login h-screen w-full bg-adbg flex justify-center content-center items-center bg-no-repeat bg-cover " >
         <div className="flex rounded-2xl justify-center  shadow-2xl bg-adbg">
