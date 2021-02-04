@@ -8,7 +8,7 @@ import Profile from './provider/pages/profile'
 import Orders from './provider/pages/orders'
 import Dashboard from './provider/pages/dashboard'
 import PrivateRoute from './components/routing/PrivateRoute'
-
+import AddService from './provider/components/services/add'
 import {BrowserRouter as Router, Switch , Route} from 'react-router-dom';
 const Provider =()=>{
 
@@ -22,6 +22,7 @@ return(
                 <Route path="/forgot" component={Forgot} />
                 <PrivateRoute path="/profile" component={Profile}/>
                 <PrivateRoute path="/orders" component={Orders}/>
+                <PrivateRoute path="/addservice" component={AddService}/>
                 <PrivateRoute path="/dashboard" component={Dashboard}/>
             </Switch>
         </div>

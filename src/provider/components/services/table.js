@@ -2,7 +2,6 @@ import React from 'react'
 const Table =({posts , loading})=>{
     if(loading){
         return <p>Loading...</p>
-        
     }
     return(
         <div className="flex flex-col">

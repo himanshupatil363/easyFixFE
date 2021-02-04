@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import Navbar from '../components/navbar';
 import Hero from '../components/services/hero'
 const Dashboard = () =>{
@@ -25,6 +26,7 @@ const Dashboard = () =>{
                     </div>
                 </div>
                 <Hero />
+            <NavLink to="/addservice" className="px-7 py-2 rounded mx-2 bg-adpri text-white">add service</NavLink>
             </div>
         </div>
     );
