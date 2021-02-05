@@ -10,6 +10,7 @@ import Forgot from './pages/auth/forgot'
 import passwordreset from './pages/auth/ResetPassword'
 import Home from './pages/home'
 import Api from './pages/api'
+import Order from './components/categories/order'
 import Service from './components/categories/service'
 import PrivateRoute from './components/routing/PrivateRoute'
 import {BrowserRouter as Router, Switch , Route} from 'react-router-dom';
@@ -28,6 +29,7 @@ return(
                 <Route path="/api" component={Api} />
                 <Route path="/passwordreset/:resetToken" component={passwordreset} />
                 <PrivateRoute exact path={"/cat/:id"} component={Service}/>
+                <PrivateRoute exact path={"/ser/:id"} component={Order}/>
             </Switch>
     </Router>
     )

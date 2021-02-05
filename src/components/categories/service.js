@@ -30,6 +30,7 @@ let { id } = useParams();
                                     category={data.category}
                                     price={data.price}
                                     img={data.img}
+                                    id={data._id}
                                 />
                                 </li>
                             );

@@ -1,9 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
-const serinfo = (data) => {
+const serinfo = (data,key) => {
+    let id= data.id
     return (
-        <NavLink to="" className="flex flex-col">
+        <NavLink to={`/ser/${id}`} key={key} className="flex flex-col">
             <div><img className="h-80 w-80 rounded-t-xl" src={data.img} alt="not loaded" /></div>
             <div className="mx-4 my-4">
                 <p className="mt-2 text-lg">{data.name}</p>
@@ -13,5 +13,4 @@ const serinfo = (data) => {
         </NavLink>
     )
 }
-
-export default serinfo
+export default serinfo;
