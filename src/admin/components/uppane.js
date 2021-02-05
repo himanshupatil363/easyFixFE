@@ -1,7 +1,5 @@
 import {NavLink} from 'react-router-dom'
-import { useEffect, useState } from 'react'
 import chat from '../assets/chat.svg'
-import axios from 'axios'
 import bell from '../assets/bell.svg'
 import search from '../assets/search.svg'
 const Uppane = () =>{

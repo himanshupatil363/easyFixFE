@@ -1,13 +1,15 @@
 import {useEffect,useState} from 'react';
 import '../../assets/css/custom.css'
 import axios from 'axios';
-import Cats from '../../components/categories/d_cat' 
+import Serv from '../../components/categories/serinfo'
+import {useParams} from 'react-router-dom'
 const Cat =()=>{
 const [catData,setCatData]=useState([]);
+let { id } = useParams();
     useEffect(() => {
-        const fetchCategories = async () => {
+        const FetchCategories = async () => {
           try {
-            const { data } = await axios.get("http://localhost:9990/category/all");
+            const { data } = await axios.get(`http://localhost:9990/service/cat/${id}`);
             setCatData(data);
 
         } catch (error) {
@@ -15,24 +17,25 @@ const [catData,setCatData]=useState([]);
                
           }
         };
-        fetchCategories();
-      }, []);
+        FetchCategories();
+      }, [id]);
     return(
-        <div className="Cat bg-white">
+        <div className="Cat">
             <div className="name">
                     <ul className="flex justify-around p-10 flex-wrap">
                     {catData.map((data, key) => {
                         return (
-                                <Cats 
+                                <Serv 
                                     key={key}
                                     name={data.name}
-                                    link={data.img}
+                                    category={data.category}
+                                    price={data.price}
+                                    img={data.img}
                                 />
                             );
                         })
                     }
-                    </ul>
-                    
+                </ul>      
             </div>
         </div>
     );

@@ -7,11 +7,11 @@ const Hero  = () =>{
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(2);
+    const [postsPerPage] = useState(5);
     useEffect(()=>{
         const fetchPosts = async ()=>{
             setLoading(true);
-            const res = await axios.get('http://localhost:9990/provider/all');
+            const res = await axios.get('http://localhost:9990/api/pauth/all');
             setPosts(res.data);
             setLoading(false);
         }
