@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import axios from 'axios'
 import Navbar from '../../components/navbar'
 const Add = () => {
@@ -8,6 +8,19 @@ const Add = () => {
     const [category, setCategory] = useState();
     const [error,setError] = useState();
     const [success,setSuccess] = useState();
+    const [catData,setCatData]=useState([]);
+    useEffect(() => {
+        const fetchCategories = async () => {
+          try {
+            const { data } = await axios.get("http://localhost:9990/category/all");
+            setCatData(data);
+
+        } catch (error) {
+            console.log(error)    
+          }
+        };
+        fetchCategories();
+      }, []);
     const addService = async (e) => {
         e.preventDefault();
         const config = {
@@ -61,16 +74,10 @@ const Add = () => {
                             Category
                         </label>
                         <select className="outline-none border-2 border-gray-500 my-2 w-96 hover:border-t-2 focus:border-primary h-10 rounded-lg hover:border-primary opacity-80  transition ease-in-out duration-500" name="category" id="category" onChange={(e)=>setCategory(e.target.value)}>
-                            <option value="Home cleaning and repair">Home cleaning and repair</option>
-                            <option value="Tutors and lessons">Tutors and lessons</option>
-                            <option value="Home design and construction">Home design and construction</option>
-                            <option value="Home moving and shifting">Home moving and shifting</option>
-                            <option value="Party and event service">Party and event service</option>
-                            <option value="Wedding planner service">Wedding planner service</option>
-                            <option value="Health and Wellness">Health and Wellness</option>
-                            <option value="Salon at home">Salon at home</option>
-                            <option value="Appliance repairing">Appliance repairing</option>
-                            <option value="Home sanitization">Home sanitization</option>
+                        {catData.map((data, key) => {
+                        return (
+                            <option key={key} value={data.name}>{data.name}</option>
+                        )})}
                         </select>
                         {error && <span className="error-message">{error}</span>}
                         {success && <span className="success-message">{success} service added successfuly !!</span>}
