@@ -6,6 +6,7 @@ const Order = () => {
     const [catData, setCatData] = useState([]);
     const [value, onChange] = useState(new Date());
     const [user, setUser] = useState();
+    const [price, setPrice] = useState();
     const [customer, setCustomer] = useState();
     const [provider, setProvider] = useState();
     const [service, setService] = useState();
@@ -24,6 +25,7 @@ const Order = () => {
           setCatData(data);
           setProvider(data.provider[0]);
           setService(data.name)
+          setPrice(data.price)
           
         } catch (error) {
           console.log(error)
@@ -56,7 +58,8 @@ const Order = () => {
           provider:provider,
           service:service,
           address:address,
-          datetime:value
+          datetime:value,
+          price:price,
         },
       );
       setSuccess("order successfull");

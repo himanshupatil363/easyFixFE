@@ -6,7 +6,7 @@ const Dashboard = () =>{
     return(
         <div className="Dashboard">
             <Navbar />
-            <div className="bg-white mx-20 rounded-xl">
+            <div className="bg-white mx-20 rounded-xl pb-10">
                 <div className="flex justify-around">
                     <div className="bg-green-100 rounded-2xl my-20 h-52 w-52">
                         <p className="pt-32 pl-4">Total Income</p>
@@ -26,7 +26,7 @@ const Dashboard = () =>{
                     </div>
                 </div>
                 <Hero />
-            <NavLink to="/addservice" className="px-7 py-2 rounded mx-2 bg-adpri text-white">add service</NavLink>
+            <NavLink to="/addservice" className="px-7 py-2 rounded mx-4 bg-adpri text-white">Add service</NavLink>
             </div>
         </div>
     );

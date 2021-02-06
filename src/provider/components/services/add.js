@@ -87,7 +87,7 @@ const Add = () => {
                         <label htmlFor="msg" className="my-1 text-lg">
                             Category
                         </label>
-                        <select className="outline-none border-2 border-gray-500 my-2 w-96 hover:border-t-2 focus:border-primary h-10 rounded-lg hover:border-primary opacity-80  transition ease-in-out duration-500" name="category" id="category" onChange={(e)=>setCategory(e.target.value)}>
+                        <select className="outline-none border-2 border-gray-500 my-2 w-96 hover:border-t-2 mb-10 focus:border-primary h-10 rounded-lg hover:border-primary opacity-80  transition ease-in-out duration-500" name="category" id="category" onChange={(e)=>setCategory(e.target.value)}>
                         {catData.map((data, key) => {
                         return (
                             <option key={key} value={data.name}>{data.name}</option>
@@ -95,7 +95,7 @@ const Add = () => {
                         </select>
                         {error && <span className="error-message">{error}</span>}
                         {success && <span className="success-message">{success} service added successfuly !!</span>}
-                        <button className="bg-dull text-white rounded-xl px-10 py-3 text-lg  duration-1000  hover:bg-white hover:text-green-500 text-center mt-10 focus:outline-none outline-none"  type="submit">Add Service</button>
+                        <button className="bg-dull text-white rounded-xl px-10 py-3 text-lg  duration-1000 hover:bg-white hover:text-green-500 text-center focus:outline-none outline-none"  type="submit">Add Service</button>
                     </form>
                 </div>                      
             </div>
