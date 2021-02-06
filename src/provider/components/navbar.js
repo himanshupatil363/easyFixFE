@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // import axios from "axios";
 import { NavLink} from 'react-router-dom';
 // import brindesh from '../../assets/images/brindesh.png'
@@ -7,7 +7,6 @@ const Navbar = () => {
   const logoutHandler = () =>{
     localStorage.removeItem("authToken");
   };
-
   return (
     <div className="Navbar sticky top-0 z-50 bg-cover" >
       <nav className="w-full">

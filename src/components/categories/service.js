@@ -23,7 +23,7 @@ let { id } = useParams();
                     <ul className="flex justify-around p-10 flex-wrap">
                     {catData.map((data, key) => {
                         return (
-                            <li className="bg-white rounded-xl hover:shadow-2xl duration-700">
+                            <li className="bg-white rounded-xl hover:shadow-2xl duration-700 my-4">
                                 <Serv
                                     key={key}
                                     name={data.name}

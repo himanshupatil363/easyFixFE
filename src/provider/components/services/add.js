@@ -9,12 +9,24 @@ const Add = () => {
     const [error,setError] = useState();
     const [success,setSuccess] = useState();
     const [catData,setCatData]=useState([]);
+    const [providerData, setProviderData] = useState("");
+  useEffect(() => {
+    const fetchProviderData = async () => {
+      try {
+        let token = localStorage.getItem("authToken");
+        const pdata = await axios.get(`http://localhost:9990/service/providerinfo/${token}`);
+        setProviderData(pdata.data._id);
+      } catch (error) { 
+        console.log(error);
+      }
+    };
+    fetchProviderData();
+  }, []);
     useEffect(() => {
         const fetchCategories = async () => {
           try {
             const { data } = await axios.get("http://localhost:9990/category/all");
             setCatData(data);
-
         } catch (error) {
             console.log(error)    
           }
@@ -31,10 +43,11 @@ const Add = () => {
         try {
             const {data} = await axios.post(
                 "/service/add", {
-                    name,
-                    category,
-                    price,
-                    img
+                    name:name,
+                    category:category,
+                    price:price,
+                    img:img,
+                    provider:providerData,
                 },
                 config
             );
@@ -50,6 +63,7 @@ const Add = () => {
         }
         e.target.reset();
     }
+    
     return (
         <>
         <Navbar />
@@ -61,15 +75,15 @@ const Add = () => {
                         <label htmlFor="name" className="my-1 text-lg">
                             Service Name
                         </label>
-                        <input className="border-2 border-gray-500 outline-none my-2 h-10 rounded-lg hover:border-primary focus:border-primary opacity-80 transition ease-in-out duration-500" type="text" name="Sname" id="Sname" onChange={(e)=>setName(e.target.value)} />
+                        <input className="border-2 border-gray-500 outline-none my-2 h-10 px-2 rounded-lg hover:border-primary focus:border-primary opacity-80 transition ease-in-out duration-500" type="text" name="Sname" id="Sname" onChange={(e)=>setName(e.target.value)} />
                         <label htmlFor="email" className="my-1 text-lg">
                             Price
                         </label>
-                        <input className="border-2 border-gray-500 outline-none my-2 h-10  rounded-lg focus:border-primary hover:border-primary opacity-80  transition ease-in-out duration-500" type="number" name="price" id="price" onChange={(e)=>setPrice(e.target.value)}/>
+                        <input className="border-2 border-gray-500 outline-none my-2 h-10 px-2 rounded-lg focus:border-primary hover:border-primary opacity-80  transition ease-in-out duration-500" type="number" name="price" id="price" onChange={(e)=>setPrice(e.target.value)}/>
                         <label htmlFor="msg" className="my-1 text-lg">
                             Image Url
                         </label>
-                        <input className="outline-none border-2 border-gray-500 my-2 w-96 hover:border-t-2 focus:border-primary h-10 rounded-lg hover:border-primary opacity-80  transition ease-in-out duration-500" type="text" name="img" id="img" onChange={(e)=>setImg(e.target.value)}/>
+                        <input className="outline-none border-2 border-gray-500 my-2 w-96 px-2 hover:border-t-2 focus:border-primary h-10 rounded-lg hover:border-primary opacity-80  transition ease-in-out duration-500" type="text" name="img" id="img" onChange={(e)=>setImg(e.target.value)}/>
                         <label htmlFor="msg" className="my-1 text-lg">
                             Category
                         </label>
