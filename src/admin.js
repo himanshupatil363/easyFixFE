@@ -7,7 +7,7 @@ import User from './admin/pages/users'
 import Provider from './admin/pages/provider'
 import Category from './admin/pages/category'
 import Services from './admin/pages/services'
-import Orders from './admin/pages/Orders'
+import Orders from './admin/pages/orders'
 import PrivateRoute from './components/routing/PrivateRoute'
 const Admin = () => {
 return(
