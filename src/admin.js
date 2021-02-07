@@ -6,10 +6,8 @@ import {BrowserRouter as Router, Switch , Route} from 'react-router-dom';
 import User from './admin/pages/users'
 import Provider from './admin/pages/provider'
 import Category from './admin/pages/category'
-import Subcategory from './admin/pages/subcategory'
-import Steps from './admin/pages/steps'
-import Packages from './admin/pages/packages'
-import Offers from './admin/pages/offers'
+import Services from './admin/pages/services'
+import Orders from './admin/pages/Orders'
 import PrivateRoute from './components/routing/PrivateRoute'
 const Admin = () => {
 return(
@@ -21,10 +19,8 @@ return(
                 <PrivateRoute path="/users" component={User} />
                 <PrivateRoute path="/provider" component={Provider} />
                 <PrivateRoute path="/category" component={Category} />
-                <PrivateRoute path="/subcategory" component={Subcategory} />
-                <PrivateRoute path="/steps" component={Steps} />
-                <PrivateRoute path="/packages" component={Packages} />
-                <PrivateRoute path="/offers" component={Offers} />
+                <PrivateRoute path="/services" component={Services} />
+                <PrivateRoute path="/orders" component={Orders} />
             </Switch>
         </div>
     </Router>

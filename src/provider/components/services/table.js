@@ -28,8 +28,8 @@ const Table =({posts , loading})=>{
                         <tr key={post.id}>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center">
-                              <div className="flex-shrink-0 h-10 w-10">
-                                <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60" alt="" />
+                              <div className="flex-shrink-0 h-14 w-14">
+                                <img className="h-14 w-14 rounded-full" src={post.img} alt="" />
                               </div>
                               <div className="ml-4 font-semibold">
                                 {post.name}

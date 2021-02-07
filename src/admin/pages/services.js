@@ -3,7 +3,7 @@ const Subcategory = () =>{
     return(
         <div className="Subcategory flex">
             <Navbar />
-            admin Subcategory
+            admin services
         </div>
     );
 }

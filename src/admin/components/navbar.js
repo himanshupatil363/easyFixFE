@@ -8,10 +8,8 @@ const Navbar = () => {
             <li className="py-4"><NavLink to="/users">Users</NavLink></li>
             <li className="py-4"><NavLink to="/provider">Provider</NavLink></li>
             <li className="py-4"><NavLink to="/category">Category</NavLink></li>
-            <li className="py-4"><NavLink to="/subcategory">Subcategory</NavLink></li>
-            <li className="py-4"><NavLink to="/steps">Steps</NavLink></li>
-            <li className="py-4"><NavLink to="/packages">Packages</NavLink></li>
-            <li className="py-4"><NavLink to="/offers">Offers</NavLink></li>
+            <li className="py-4"><NavLink to="/services">Services</NavLink></li>
+            <li className="py-4"><NavLink to="/orders">Orders</NavLink></li>
         </ul>
       </div>
     </div>
