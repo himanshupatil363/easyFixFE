@@ -1,8 +1,24 @@
-import React from 'react'
+import {useState,useEffect} from 'react'
 import {Bar , Doughnut} from 'react-chartjs-2'
+import axios from 'axios'
 const Charts = () =>{
+    const [catData,setCatData]=useState([]);
+    useEffect(() => {
+        const fetchCategories = async () => {
+          try {
+            const { data }= await axios.get("http://localhost:9990/category/all");
+            setCatData(data.data);
+
+        } catch (error) {
+              console.log(error)
+               
+          }
+        };
+        fetchCategories();
+      }, []);
+    //   console.log(catData.map(name => {return name}))
     const data = {
-        labels: ['Brinda', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['himanshu','patil'],
         datasets: [{
             label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3],
@@ -24,6 +40,7 @@ const Charts = () =>{
             ],
             borderWidth: 1
         }]
+        
     }
     return(
         <div>
