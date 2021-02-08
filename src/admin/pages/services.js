@@ -1,10 +1,12 @@
+import React from 'react';
 import Navbar from '../components/navbar'
-const Subcategory = () =>{
+import Hero from '../components/service/hero'
+const Services = () =>{
     return(
-        <div className="Subcategory flex">
+        <div className="Services flex">
             <Navbar />
-            admin services
+            <Hero />
         </div>
     );
 }
-export default Subcategory;
+export default Services;

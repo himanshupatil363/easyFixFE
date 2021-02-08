@@ -1,10 +1,12 @@
 import Navbar from '../components/navbar'
-const orders = () => {
+import Hero from '../components/order/hero'
+const Orders = () => {
     return (
-        <div className="flex">
+        <div className="Order flex">
             <Navbar />
+            <Hero />
         </div>
     )
 }
 
-export default orders;
+export default Orders;

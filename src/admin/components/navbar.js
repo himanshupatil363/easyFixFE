@@ -10,6 +10,7 @@ const Navbar = () => {
             <li className="py-4"><NavLink to="/category">Category</NavLink></li>
             <li className="py-4"><NavLink to="/services">Services</NavLink></li>
             <li className="py-4"><NavLink to="/orders">Orders</NavLink></li>
+            <li className="py-4"><NavLink to="/feedbacks">Feedbacks</NavLink></li>
         </ul>
       </div>
     </div>

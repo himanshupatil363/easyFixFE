@@ -4,8 +4,6 @@ import axios from 'axios'
 import Order from '../components/orders/order'
 const Orders = () =>{
     const [ord,setOrd] = useState([]);
-    const [date,setDate] = useState();
-    const [time,setTime] = useState();
     useEffect(() => {
         const id= localStorage.getItem("authToken")
         const FetchCategories = async () => {
