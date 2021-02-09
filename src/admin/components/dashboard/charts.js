@@ -27,7 +27,7 @@ const Charts = () =>{
             }
         };
         fetchCategories();
-      }, []);
+      }, [catName]);
     const data = {
         labels: catName,
         datasets: [{
@@ -62,14 +62,14 @@ const Charts = () =>{
                 options={{ maintainAspectRatio: false }}
             />
             </div>
-            <div className="my-16 bg-white h-96 p-8 rounded-xl shadow-xl">
+            {/* <div className="my-16 bg-white h-96 p-8 rounded-xl shadow-xl">
             <Doughnut 
                 data={data}
                 width={50}
                 height={30}
                 options={{ maintainAspectRatio: false }}    
                 />
-                </div>
+                </div> */}
         </div>
     );
 }
