@@ -44,7 +44,7 @@ const table = ({posts , loading}) => {
                   {post.status}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                {`${('0'+new Date(post.joinedAt).getDate()).slice(-2)}-${('0'+new Date(post.joinedAt).getMonth() + 1).slice(-2)}-${new Date(post.joinedAt).getFullYear()} At ${('0'+new Date(post.joinedAt).getHours()%12).slice(-2) ? ('0'+new Date(post.joinedAt).getHours()%12).slice(-2) : 12}:${('0'+new Date(post.joinedAt).getMinutes()).slice(-2)} ${new Date(post.joinedAt).getHours() >= 12 ? 'PM' : 'AM'}`}
+                {`${('0'+new Date(post.datetime).getDate()).slice(-2)}-${('0'+new Date(post.datetime).getMonth() + 1).slice(-2)}-${new Date(post.datetime).getFullYear()} At ${('0'+new Date(post.datetime).getHours()%12).slice(-2) ? ('0'+new Date(post.datetime).getHours()%12).slice(-2) : 12}:${('0'+new Date(post.datetime).getMinutes()).slice(-2)} ${new Date(post.datetime).getHours() >= 12 ? 'PM' : 'AM'}`}
                 </td>
               </tr>
             ))

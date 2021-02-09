@@ -40,7 +40,8 @@ const table = ({posts , loading}) => {
                   {post.msg}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  {post.submittedat}
+                {`${('0'+new Date(post.submittedat).getDate()).slice(-2)}-${('0'+new Date(post.submittedat).getMonth() + 1).slice(-2)}-${new Date(post.submittedat).getFullYear()} At ${('0'+new Date(post.submittedat).getHours()%12).slice(-2) ? ('0'+new Date(post.submittedat).getHours()%12).slice(-2) : 12}:${('0'+new Date(post.submittedat).getMinutes()).slice(-2)} ${new Date(post.submittedat).getHours() >= 12 ? 'PM' : 'AM'}`}
+
                 </td>
               </tr>
             ))

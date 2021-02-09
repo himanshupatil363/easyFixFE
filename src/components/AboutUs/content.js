@@ -18,7 +18,7 @@ const Content =  () => {
                     </div>
                     <div><p className="text-2xl text-center font-bold m-2">5 Million+</p>
                     <p>Happy Customers</p></div>
-                    <div><p className="text-2xl text-center font-bold m-2">5</p>
+                    <div><p className="text-2xl text-center font-bold m-2">19</p>
                     <p>Cities</p></div>
                 </div>
             </div>
