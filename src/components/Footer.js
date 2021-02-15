@@ -20,6 +20,7 @@ const Footer = () => {
                 <NavLink to="/" exact activeClassName="text-ter"><p className="my-3">Home</p></NavLink>
                 <NavLink to="/about" activeClassName="text-ter"><p className="my-3">About</p></NavLink>
                 <NavLink to="/categories" activeClassName="text-ter"><p className="my-3">Categories</p></NavLink>
+                <NavLink to="/orders" activeClassName="text-ter"><p className="my-3">Order</p></NavLink>
                 <NavLink to="/contact" activeClassName="text-ter"><p className="my-3">Conatcts</p></NavLink>
             </div>
             </div>

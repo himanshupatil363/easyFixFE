@@ -56,6 +56,7 @@ const Navbar = () => {
                   <NavLink to="/" exact activeClassName="text-ter"><li className=" list-none  px-3 py-2 rounded-md  ">Home</li></NavLink>
                   <NavLink to="/about" activeClassName="text-ter"><li className="list-none  px-3 py-2 rounded-md  ">About</li></NavLink>
                   <NavLink to="/categories" activeClassName="text-ter"><li className="list-none  px-3 py-2 rounded-md  ">Categories</li></NavLink>
+                  <NavLink to="/orders" activeClassName="text-ter"><li className="list-none  px-3 py-2 rounded-md  ">Order</li></NavLink>
                   <NavLink to="/contact" activeClassName="text-ter"><li className="list-none  px-3 py-2 rounded-md  ">Contact</li></NavLink>
                 </div>
               </div>
@@ -71,7 +72,9 @@ const Navbar = () => {
            <NavLink to="/"> <li  className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Home</li></NavLink>
            <NavLink to="/about"> <li  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</li></NavLink>
            <NavLink to="/contact"> <li  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</li></NavLink>
+           <NavLink to="/orders"> <li  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Orders </li></NavLink>
            <NavLink to="/categories"> <li  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Categories</li></NavLink>
+          
           </div>
         </div>
       </nav>

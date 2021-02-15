@@ -3,6 +3,7 @@ import './assets/css/custom.css'
 import React from 'react';
 import Contact from './pages/contact'
 import Categories from './pages/categories'
+import Orders from './pages/orders'
 import About from './pages/about'
 import Login from './pages/auth/login'
 import Register from './pages/auth/register'
@@ -23,6 +24,7 @@ return(
                 <PrivateRoute path="/categories" component={Categories} />
                 <PrivateRoute path="/about" component={About} />
                 <PrivateRoute path="/contact" component={Contact} />
+                <PrivateRoute path="/orders" component={Orders} />
                 <Route path="/login" exact component={Login} />
                 <Route path="/register" component={Register} />
                 <Route path="/forgot" component={Forgot} />
