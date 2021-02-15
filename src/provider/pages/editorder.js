@@ -2,21 +2,22 @@ import { useState, useEffect } from 'react'
 import Navbar from '../components/navbar'
 import axios from 'axios'
 import Order from '../components/orders/order'
+import {useParams} from 'react-router-dom'
 const Orders = () =>{
     const [ord,setOrd] = useState([]);
-    useEffect(() => {
-        const id= localStorage.getItem("authToken")
-        const FetchCategories = async () => {
-          try {
-            const data = await axios.get(`http://localhost:9990/order/prov/${id}`);
-            setOrd(data.data);
-            console.log(ord)
-        } catch (error) {
-            console.log(error)
-          }
-        };
-        FetchCategories();
-      }, []);
+    
+useEffect(() => {
+    let { id } = useParams();
+    const fetchCategories = async () => {
+      try {
+        const { data } = await axios.put("http://localhost:9990/order/updateorder/{$id}");
+        setCatData(data);
+    } catch (error) {
+        console.log(error)    
+      }
+    };
+    fetchCategories();
+  }, []);
     return(
         <div className="Orders h-screen">
             <Navbar />

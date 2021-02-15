@@ -6,6 +6,7 @@ import Register from './provider/pages/auth/register'
 import Forgot from './provider/pages/auth/forgot'
 import Orders from './provider/pages/orders'
 import Edit from './provider/components/services/edit'
+import Editorder from './provider/pages/editorder'
 import Dashboard from './provider/pages/dashboard'
 import PrivateRoute from './components/routing/PrivateRoute'
 import AddService from './provider/components/services/add'
@@ -23,6 +24,7 @@ return(
                 <PrivateRoute path="/orders" component={Orders}/>
                 <PrivateRoute path="/addservice" component={AddService}/>
                 <PrivateRoute path="/dashboard" component={Dashboard}/>
+                <PrivateRoute exact path={"/editorder/:id"} component={Editorder}/>
                 <PrivateRoute exact path={"/edit/:id"} component={Edit}/>
             </Switch>
         </div>
