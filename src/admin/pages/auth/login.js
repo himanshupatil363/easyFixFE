@@ -5,12 +5,15 @@ const Login = ({history}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
+  const [passwordShown, setPasswordShown] = useState(false);
   useEffect(() => {
     if (localStorage.getItem("authToken")) {
       history.push("/");
     }
   }, [history]);
+  const togglePasswordVisiblity = () => {
+    setPasswordShown(passwordShown ? false : true);
+  };
 
   const loginHandler = async (e) => {
     e.preventDefault();
@@ -49,7 +52,8 @@ const Login = ({history}) => {
                <label className="mt-10">Enter Email Id</label>
                <input type="email" className=" border-b-2 border-adm bg-adbg outline-none" onChange={(e)=>{ setEmail(e.target.value)}} />
                <label className="mt-8">Enter Password</label>
-               <input type="password" className="border-b-2 border-adm bg-adbg outline-none" onChange={(e)=>{ setPassword(e.target.value)}}/>
+               <input type={passwordShown ? "text" : "password"} className="border-b-2 border-adm bg-adbg outline-none" onChange={(e)=>{ setPassword(e.target.value)}}/>
+               <i onClick={togglePasswordVisiblity}>show</i>
                <input type="submit" className="mt-10 py-2 bg-adm text-adbg rounded-md border-2 border-adm outline-none cursor-pointer hover:bg-adbg hover:text-adm  duration-1000  font-semibold text-lg mx-10" value="Login" />
              </form>
           </div>

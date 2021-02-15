@@ -2,7 +2,10 @@ import {NavLink} from 'react-router-dom'
 import chat from '../assets/chat.svg'
 import bell from '../assets/bell.svg'
 import search from '../assets/search.svg'
-const Uppane = () =>{
+const Uppane = (prop) =>{
+    // prop.posts.forEach(element => {
+    //     console.log(element.username)
+    // });
     const logoutHandler = () =>{
         localStorage.removeItem("authToken");
       };

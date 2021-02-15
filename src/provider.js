@@ -5,6 +5,7 @@ import Login from './provider/pages/auth/login'
 import Register from './provider/pages/auth/register'
 import Forgot from './provider/pages/auth/forgot'
 import Orders from './provider/pages/orders'
+import Edit from './provider/components/services/edit'
 import Dashboard from './provider/pages/dashboard'
 import PrivateRoute from './components/routing/PrivateRoute'
 import AddService from './provider/components/services/add'
@@ -13,7 +14,7 @@ const Provider =()=>{
 
 return(
     <Router>
-        <div className="Provider bg-adbg h-full">
+        <div className="Provider bg-adbg min-h-full">
             <Switch>
                 <PrivateRoute path="/" exact component={Home} />
                 <Route path="/login" component={Login} />
@@ -22,6 +23,7 @@ return(
                 <PrivateRoute path="/orders" component={Orders}/>
                 <PrivateRoute path="/addservice" component={AddService}/>
                 <PrivateRoute path="/dashboard" component={Dashboard}/>
+                <PrivateRoute exact path={"/edit/:id"} component={Edit}/>
             </Switch>
         </div>
     </Router>

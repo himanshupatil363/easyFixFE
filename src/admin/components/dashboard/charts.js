@@ -1,38 +1,14 @@
-import {useState,useEffect} from 'react'
-import {Bar , Doughnut} from 'react-chartjs-2'
-import axios from 'axios'
-const Charts = () =>{
-    const [catName,setCatName]=useState([]);
-    const [theArray, setTheArray] = useState([]);
-    useEffect(() => {
-        const fetchCategories = async () => {
-            try {
-                const {
-                    data
-                } = await axios.get("http://localhost:9990/category/all");
-                setCatName(data.map(a => {
-                    return a.name
-                }));
-                catName.map(async a => {
-                    const {
-                        data
-                    } = await axios.get(`http://localhost:9990/service/cat/${a}`);
-                    setTheArray(oldArray => [...oldArray, data.length-1]);
-                    
-                })
-                
-            } catch (error) {
-                console.log(error)
-
-            }
-        };
-        fetchCategories();
-      }, [catName]);
+// import {useState,useEffect} from 'react'
+import {Bar } from 'react-chartjs-2'
+// import axios from 'axios'
+const Charts = (prop) =>{
+    console.log(prop)
+    console.log(prop.loading)
     const data = {
-        labels: catName,
+        labels: [],
         datasets: [{
             label: '# of Votes',
-            data: theArray,
+            data: [],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

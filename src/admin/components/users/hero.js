@@ -7,7 +7,7 @@ const Hero  = () =>{
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(5);
+    const [postsPerPage] = useState(12);
     useEffect(()=>{
         const fetchPosts = async ()=>{
             setLoading(true);
@@ -26,7 +26,7 @@ const Hero  = () =>{
     }
     return(
         <div className="Hero w-full ml-60 flex flex-col">
-            <Up />
+            <Up posts={posts}/>
             <Tab posts={currentPosts} loading={loading}/>
             <Pag postsPerPage={postsPerPage} totalPosts={posts.length} indexOfLastPost={indexOfLastPost} indexOfFirstPost={indexOfFirstPost} paginate={paginate}/>
         </div>

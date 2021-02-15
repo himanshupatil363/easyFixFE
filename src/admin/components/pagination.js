@@ -21,7 +21,7 @@ const Pagination = ({postsPerPage, totalPosts, indexOfLastPost, indexOfFirstPost
                   Showing
                   <span className="font-medium"> {indexOfFirstPost+1} </span>
                   to
-                  <span className="font-medium"> {indexOfLastPost} </span>
+                  <span className="font-medium"> {indexOfLastPost > totalPosts ? totalPosts : indexOfLastPost} </span>
                   of
                   <span className="font-medium"> {totalPosts} </span>
                   results

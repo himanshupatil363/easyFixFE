@@ -2,6 +2,8 @@ import {useState,useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
 import DateTimePicker from 'react-datetime-picker';
+import Navbar from '../Navbar'
+import Footer from '../Footer'
 const Order = () => {
     const [catData, setCatData] = useState([]);
     const [value, onChange] = useState(new Date());
@@ -72,9 +74,10 @@ const Order = () => {
       e.target.reset();
     }
     return (
-          <div>
-            <div className="flex justify-center bg-blue-200">
-                <div className="px-20 my-10 py-6 rounded-xl bg-white">
+          <div className="h-full bg-blue-200" >
+          <Navbar />
+            <div className=" h-full flex justify-center items-center">
+                <div className="px-20 my-10 py-20 mb-24 rounded-xl bg-white">
                     <form className="flex flex-col" onSubmit={placeOrder}>
                         <div className="flex my-6">
                           <div className="flex justify-around w-auto">
@@ -125,6 +128,7 @@ const Order = () => {
                     </form>
                 </div>                      
             </div>
+          <Footer />
         </div>  
     )
 }

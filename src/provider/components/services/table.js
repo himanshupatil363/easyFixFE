@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 const Table =({posts , loading})=>{
     if(loading){
         return <p>Loading...</p>
@@ -19,6 +20,9 @@ const Table =({posts , loading})=>{
                       </th>
                       <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Price
+                      </th>
+                      <th>
+
                       </th>
                     </tr>
                   </thead>
@@ -41,6 +45,9 @@ const Table =({posts , loading})=>{
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
                             {post.price}
+                          </td>
+                          <td>
+                            <NavLink to={`/edit/${post._id}`} className="bg-gray-300 py-1 px-5 rounded-md outline-none cursor-pointer">Edit</NavLink>
                           </td>
                         </tr>
                       ))

@@ -4,7 +4,7 @@ import Navbar from '../components/navbar';
 import Hero from '../components/services/hero'
 const Dashboard = () =>{
     return(
-        <div className="Dashboard">
+        <div className="Dashboard h-screen">
             <Navbar />
             <div className="bg-white mx-20 rounded-xl pb-10">
                 <div className="flex justify-around">
