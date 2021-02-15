@@ -10,6 +10,7 @@ import Services from './admin/pages/services'
 import Orders from './admin/pages/orders'
 import Feedbacks from './admin/pages/feedback'
 import PrivateRoute from './components/routing/PrivateRoute'
+import addCategory from './admin/pages/addCategory'
 const Admin = () => {
 return(
     <Router>
@@ -23,6 +24,7 @@ return(
                 <PrivateRoute path="/services" component={Services} />
                 <PrivateRoute path="/orders" component={Orders} />
                 <PrivateRoute path="/feedbacks" component={Feedbacks} />
+                <PrivateRoute path="/addCategory" component={addCategory} />
             </Switch>
         </div>
     </Router>

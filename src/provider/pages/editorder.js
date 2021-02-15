@@ -3,22 +3,24 @@ import Navbar from '../components/navbar'
 import axios from 'axios'
 import Order from '../components/orders/order'
 import {useParams} from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 const Orders = () =>{
     const [ord,setOrd] = useState([]);
-    const [catData,setCatData]=useState([]);
-    let { id } = useParams();
+    let {id}  = useParams();
+    let history = useHistory();
 useEffect(() => {
-   
     const fetchCategories = async () => {
       try {
-        const { data } = await axios.put("http://localhost:9990/order/updateorder/{$id}");
-        setCatData(data);
+        const { data } = await axios.put(`http://localhost:9990/order/updateorder/${id}`);
+        setOrd(data);
     } catch (error) {
-        console.log(error)    
+        console.log(error)
       }
     };
     fetchCategories();
-  }, []);
+    history.push('/orders')
+  }, [id]);
+
     return(
         <div className="Orders h-screen">
             <Navbar />

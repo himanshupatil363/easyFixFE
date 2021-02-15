@@ -33,6 +33,7 @@ const Orders = () =>{
                             time={`${('0'+new Date(data.datetime).getHours()%12).slice(-2) ? ('0'+new Date(data.datetime).getHours()%12).slice(-2) : 12}:${('0'+new Date(data.datetime).getMinutes()).slice(-2)} ${new Date(data.datetime).getHours() >= 12 ? 'PM' : 'AM'}`}
                             date={`${('0'+new Date(data.datetime).getDate()).slice(-2)}-${('0'+new Date(data.datetime).getMonth() + 1).slice(-2)}-${new Date(data.datetime).getFullYear()}`}
                             amt={data.price}
+                            service={data.service}
                             status={data.status}
                         />
                     );
