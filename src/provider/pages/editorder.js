@@ -5,9 +5,10 @@ import Order from '../components/orders/order'
 import {useParams} from 'react-router-dom'
 const Orders = () =>{
     const [ord,setOrd] = useState([]);
-    
-useEffect(() => {
+    const [catData,setCatData]=useState([]);
     let { id } = useParams();
+useEffect(() => {
+   
     const fetchCategories = async () => {
       try {
         const { data } = await axios.put("http://localhost:9990/order/updateorder/{$id}");
