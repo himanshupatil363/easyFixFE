@@ -1,6 +1,15 @@
-import React from 'react'
-
-const table = ({posts , loading}) => {
+import axios from 'axios'
+const Table = ({posts , loading}) => {
+  const deleteService = async (id) => {
+    try {
+      await axios.post(
+        `http://localhost:9990/service/deleteservice/${id}`,
+      );
+      window.location.reload();
+    } catch (error) {
+      console.log(error)
+    }
+  };
   if(loading){
     return <p>Loading...</p>
 }
@@ -20,6 +29,9 @@ const table = ({posts , loading}) => {
               </th>
               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Price
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Delete
               </th>
             </tr>
           </thead>
@@ -43,6 +55,9 @@ const table = ({posts , loading}) => {
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                   {post.price}
                 </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <button onClick={() => deleteService(post._id)} className="bg-red-600 text-white px-3 py-1 rounded-md">Delete</button>
+                </td>
               </tr>
             ))
           }
@@ -55,5 +70,5 @@ const table = ({posts , loading}) => {
     )
 }
 
-export default table
+export default Table
 
