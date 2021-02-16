@@ -6,7 +6,8 @@ import users from '../../assets/home/users.svg'
 import orders from '../../assets/home/orders.svg'
 import categories from '../../assets/home/categories.svg'
 import providers from '../../assets/home/providers.svg'
-import Pan from '../../components/uppane'
+import Up from '../../components/uppane'
+
 const Hero = () =>{
     const [cat, setCat] = useState();
     const [user, setUser] = useState();
@@ -53,7 +54,7 @@ const Hero = () =>{
     else{
     return(
         <div className="Hero w-full ml-60 flex flex-col h-screen">
-        <Pan />
+        <Up />
             <div className="flex w-full justify-between mt-12">
                 <Box name="Orders" amount={order} progress={order} icon={orders}/>
                 <Box name="Categories" amount={cat} progress={cat} icon={categories}/>
