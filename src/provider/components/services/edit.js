@@ -57,7 +57,7 @@ const Edit = () => {
                         </label>
                         <input className="outline-none border-2 border-gray-500 my-2 w-96 px-2 hover:border-t-2 focus:border-primary h-10 rounded-lg hover:border-primary opacity-80  transition ease-in-out duration-500" type="text" name="img" id="img" value={img} onChange={(e)=>setImg(e.target.value)}/>
                         <p className={one}>Service updated successfully</p>
-                        <button className="bg-dull text-white rounded-xl px-10 py-3 text-lg  duration-1000 hover:bg-white hover:text-green-500 text-center focus:outline-none outline-none" onClick={()=>{setOne()}}  type="submit">Add Service</button>
+                        <button className="bg-dull text-white rounded-xl px-10 py-3 text-lg  duration-1000 hover:bg-white hover:text-green-500 text-center focus:outline-none outline-none" onClick={()=>{setOne()}}  type="submit">Edit Service</button>
                     </form>
                 </div>                      
             </div>
