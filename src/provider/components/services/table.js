@@ -1,6 +1,21 @@
 import React from 'react'
+import axios from 'axios'
 import {NavLink} from 'react-router-dom'
+
 const Table =({posts , loading})=>{
+  const deleteService = async (id) => {
+    try {
+      await axios.post(
+        `http://localhost:9990/service/deleteservice/${id}`,
+      );
+      window.location.reload();
+    } catch (error) {
+      console.log(error)
+    }
+  };
+  if(loading){
+    return <p>Loading...</p>
+}
     if(loading){
         return <p>Loading...</p>
     }
@@ -21,9 +36,9 @@ const Table =({posts , loading})=>{
                       <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Price
                       </th>
-                      <th>
-
-                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Action
+              </th>
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
@@ -49,6 +64,9 @@ const Table =({posts , loading})=>{
                           <td>
                             <NavLink to={`/edit/${post._id}`} className="bg-gray-300 py-1 px-5 rounded-md outline-none cursor-pointer">Edit</NavLink>
                           </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                  <button onClick={() => deleteService(post._id)} className="bg-red-600 text-white px-3 py-1 rounded-md">Delete</button>
+                </td>
                         </tr>
                       ))
                     }
